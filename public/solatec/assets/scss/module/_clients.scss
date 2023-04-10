@@ -1,0 +1,48 @@
+/*---------------------------
+    Client
+---------------------------*/
+.clients {
+	.client {
+		position: relative;
+		text-align: center;
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		img {
+			display: inline-block;
+			width: auto !important;
+			max-width: 100%;
+		}
+	}
+}
+
+.clients-light .client img {
+	filter: brightness(100);
+}
+
+.clients-layout2 {
+	.client {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+}
+
+/* Medium Size Screens */
+@include md-screens {
+	.clients .client {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+	.clients .client {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.clients-layout2 {
+		padding-bottom: 30px !important;
+	}
+}

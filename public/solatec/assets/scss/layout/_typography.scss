@@ -1,0 +1,187 @@
+/*-------------------------
+   Typography
+--------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $color-heading;
+    font-family: $font-heading;
+    text-transform: capitalize;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+.heading__subtitle {
+    font-family: $font-body;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: 10px;
+}
+
+.heading__title {
+    position: relative;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.heading__desc {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.heading-layout2 {
+    .heading__title {
+        font-size: 40px;
+    }
+}
+
+.heading-layout3 {
+    .heading__title:after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        top: 50%;
+        width: 30px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $color-primary;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+    }
+}
+
+.heading-light {
+
+    .heading__subtitle {
+        color: $color-gray;
+
+        &:after {
+            background-color: $color-white;
+        }
+    }
+
+    .heading__title,
+    .heading__desc {
+        color: $color-white;
+    }
+}
+
+.text__block-subtitle {
+    color: $color-primary;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.text__block-title {
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+
+.text__block-desc {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.text__link {
+    font-size: 14px;
+    font-weight: 700;
+
+    a {
+        color: $color-heading;
+        border-bottom: 2px solid $color-heading;
+        padding-bottom: 2px;
+    }
+
+    &:hover a {
+        color: $color-primary;
+        border-bottom-color: $color-primary;
+    }
+}
+
+@media (min-width:992px) {
+    .text__block-layout2 {
+        position: relative;
+
+        .text__block-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .text__block-content {
+            padding-left: 230px;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .heading__title {
+        font-size: 30px;
+    }
+
+    .heading-layout2 .heading__subtitle:after {
+        display: none;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .heading__title {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    .heading__subtitle,
+    .text__link {
+        font-size: 13px;
+    }
+
+    .heading__desc {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .heading-layout2 .heading__title {
+        font-size: 25px;
+    }
+
+    .text__block-desc {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}

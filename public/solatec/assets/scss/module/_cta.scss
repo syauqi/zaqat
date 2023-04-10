@@ -1,0 +1,217 @@
+/*-------------------------
+    Call to Action
+--------------------------*/
+.cta-layout1,
+.cta-layout2 {
+
+    .cta__title {
+        font-size: 19px;
+        margin-bottom: 17px;
+    }
+
+    .cta__icon {
+        color: $color-primary;
+        flex: 0 0 95px;
+        max-width: 95px;
+        font-size: 65px;
+        line-height: 1;
+    }
+
+    .cta__body {
+        flex: 0 0 calc(100% - 95px);
+        max-width: calc(100% - 95px);
+    }
+}
+
+.cta-layout1 {
+    margin-top: -150px;
+
+    .cta__item {
+        padding: 40px;
+        border-radius: 8px;
+        margin-bottom: 40px;
+        background-color: $color-white;
+        box-shadow: 0 5px 23px rgba(40, 40, 40, .08);
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 35px;
+            left: 35px;
+            height: 3px;
+            background-color: $color-primary;
+        }
+    }
+}
+
+
+.banner-layout3+.cta-layout2 .cta-container {
+    margin-top: -150px;
+}
+
+.cta-layout2 {
+    .cta-container {
+        position: relative;
+        z-index: 3;
+        border-radius: 10px;
+        background-color: $color-white;
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.16);
+
+        .cta__item {
+            padding: 35px;
+            flex: 0 0 50%;
+            max-width: 50%;
+
+            &:first-of-type:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 3;
+                transform: translate(-50%, -50%);
+                width: 2px;
+                height: calc(100% - 70px);
+                background-color: #eaeaea;
+            }
+        }
+    }
+}
+
+.cta__banner {
+    background-color: $color-primary;
+    max-width: 400px;
+    padding: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    .cta__title {
+        font-size: 22px;
+    }
+
+    .cta__desc {
+        margin-bottom: 15px;
+    }
+
+    .cta__icon {
+        line-height: 1;
+        margin-bottom: 20px;
+
+        i {
+            font-size: 60px;
+            line-height: 1;
+            color: $color-white;
+        }
+    }
+
+    .btn {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+
+        i {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            margin-left: 5px;
+            color: $color-white;
+            background-color: $color-primary;
+            @include prefix(transition, all .3s linear, webkit moz ms o);
+        }
+
+        &:hover i {
+            background-color: $color-heading;
+        }
+    }
+}
+
+.cta__banner-white {
+    background-color: $color-white;
+
+    .cta__title {
+        color: $color-heading;
+        margin-bottom: 15px;
+    }
+
+    .cta__desc {
+        color: $color-body;
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (min-width:1200px) {
+    .testimonials-layout1+.cta-layout1 {
+        margin-top: -150px;
+    }
+}
+
+@media (min-width:992px) {
+    .cta-layout2 .cta-container .cta__item {
+        &:last-of-type {
+            flex-direction: row-reverse;
+            text-align: right;
+
+            .custom-icon {
+                text-align: right;
+
+                &:before {
+                    left: auto;
+                    right: 0;
+                }
+
+                i {
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+    .cta-layout1,
+    .cta-layout2 {
+
+        .cta__title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .cta__desc {
+            font-size: 14px;
+        }
+
+        .cta__icon {
+            flex: 0 0 75px;
+            max-width: 75px;
+            font-size: 50px;
+        }
+
+        .cta__body {
+            flex: 0 0 calc(100% - 75px);
+            max-width: calc(100% - 75px);
+        }
+    }
+
+    .cta-layout1 .cta__item {
+        padding: 20px;
+    }
+
+    .cta-layout2 .cta-container .cta__item {
+        padding: 20px;
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        &:first-of-type:before {
+            display: none;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */

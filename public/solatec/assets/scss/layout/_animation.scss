@@ -1,0 +1,63 @@
+/*------------------------
+    Animations
+-----------------------*/
+@include keyframes(pulsing) {
+    0% {
+        opacity: 0;
+        @include prefix(transform, scale(1), webkit moz ms o);
+    }
+
+    40% {
+        opacity: .3;
+        @include prefix(transform, scale(1.2), webkit moz ms o);
+    }
+
+    100% {
+        opacity: 0;
+        @include prefix(transform, scale(1.5), webkit moz ms o);
+    }
+}
+
+@include keyframes(slideTopDown) {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: -5px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    75% {
+        top: 5px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@include keyframes(translateHeader) {
+    0% {
+        opacity: 0;
+        @include prefix(transform, translateY(-100%), webkit moz ms o);
+    }
+
+    100% {
+        opacity: 1;
+        @include prefix(transform, translateY(0), webkit moz ms o);
+    }
+}
+
+@include keyframes(ripple) {
+    70% {
+        box-shadow: 0 0 0 70px rgba($color-white, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba($color-white, 0);
+    }
+}

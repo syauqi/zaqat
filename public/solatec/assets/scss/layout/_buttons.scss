@@ -1,0 +1,528 @@
+/*--------------------
+   Buttons
+---------------------*/
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 170px;
+    height: 60px;
+    padding: 0 15px;
+    letter-spacing: .3px;
+    border: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    @include prefix(transition, all .3s linear, webkit moz ms o);
+
+    &:focus,
+    &.active,
+    &:active {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+    }
+
+    span,
+    i {
+        margin: 0 4px;
+    }
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+}
+
+.btn:not(.btn__link) {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $color-secondary;
+        @include prefix(transform, scaleX(0), webkit moz ms o);
+        @include prefix(transform-origin, right center, webkit moz ms o);
+        @include prefix(transition, transform .24s cubic-bezier(.37, .31, .31, .9), webkit moz ms o);
+    }
+
+    &:hover {
+        &:before {
+            @include prefix(transform, scaleX(1), webkit moz ms o);
+            @include prefix(transform-origin, left center, webkit moz ms o);
+        }
+    }
+}
+
+.btn__primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:active,
+    &:focus {
+        background-color: $color-primary;
+        color: $color-white;
+    }
+
+    &.btn__outlined {
+        color: $color-primary;
+        background-color: transparent;
+        border: 2px solid $color-primary;
+
+        &:before {
+            background-color: $color-primary;
+        }
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-white;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-primary;
+                background-color: $color-white;
+            }
+        }
+    }
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        color: $color-primary;
+        background-color: $color-white;
+    }
+
+    &:hover {
+        color: $color-white;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-secondary;
+        }
+    }
+
+    &-style2 {
+        &:before {
+            background-color: $color-white !important;
+        }
+
+        &:hover {
+            color: $color-secondary;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-white;
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+.btn__secondary {
+    background-color: $color-secondary;
+    color: $color-white;
+
+    &:before {
+        background-color: $color-primary !important;
+    }
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        color: $color-secondary;
+        background-color: $color-white;
+    }
+
+    &:hover {
+        color: $color-white;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-primary;
+        }
+    }
+
+    &:active,
+    &:focus {
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+
+    &-style2 {
+        &:before {
+            background-color: $color-white !important;
+        }
+
+        &:hover {
+            color: $color-secondary;
+        }
+    }
+
+    &.btn__outlined {
+        background-color: transparent;
+        border: 2px solid $color-secondary;
+        color: $color-secondary;
+
+        &:before {
+            display: none;
+        }
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-white;
+            background-color: $color-secondary;
+        }
+
+        &:hover {
+            color: $color-white;
+            background-color: $color-secondary;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-secondary;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.btn__white {
+    background-color: $color-white;
+    color: $color-primary;
+
+    &:before {
+        background-color: $color-primary !important;
+    }
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        color: $color-white;
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        color: $color-white;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-primary;
+            background-color: $color-white;
+        }
+    }
+
+    &:active,
+    &:focus {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+
+    &-style2 {
+        &:before {
+            background-color: $color-secondary !important;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-secondary;
+                background-color: $color-white;
+            }
+        }
+    }
+
+    &.btn__outlined {
+        background-color: transparent;
+        border: 2px solid $color-white;
+        color: $color-white;
+
+        &:hover {
+            color: $color-primary;
+            background-color: $color-white;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.btn__outlined {
+    background-color: transparent;
+}
+
+.btn__link {
+    background-color: transparent;
+    border-color: transparent;
+    min-width: 0;
+    line-height: 1;
+    height: auto;
+    padding: 0;
+    border: none;
+
+    &:focus,
+    &:active {
+        background-color: transparent;
+    }
+
+    &.btn__primary {
+        color: $color-primary;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-white;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            color: $color-secondary;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-white;
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+    &.btn__secondary {
+        color: $color-secondary;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &.btn__white {
+        color: $color-white;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-secondary;
+            background-color: $color-white;
+        }
+
+        &:hover {
+            color: $color-primary;
+
+            .icon-arrow-right,
+            .icon-arrow-left {
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+.btn__rounded {
+    border-radius: 50px;
+}
+
+.btn__block {
+    width: 100%;
+}
+
+.btn__icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+
+    span {
+        margin-right: 5px;
+    }
+
+    i {
+        margin-left: 5px;
+    }
+}
+
+.btn__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    color: $color-white;
+    border-radius: 8px;
+    margin-right: 10px;
+
+    &:hover {
+        color: $color-white;
+    }
+
+    &:before {
+        display: none;
+    }
+
+    i {
+        font-size: 18px;
+        color: $color-white;
+        background-color: transparent;
+    }
+}
+
+.btn__facebook {
+    background-color: #4267b2;
+}
+
+.btn__twitter {
+    background-color: #1da0f0;
+}
+
+.btn__instagram {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.btn__sm {
+    height: 40px;
+    min-width: 150px;
+    border-radius: 3px;
+}
+
+.btn__lg {
+    min-width: 210px;
+}
+
+.btn__xl {
+    height: 70px;
+    min-width: 250px;
+}
+
+.btn__loadMore {
+    i {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        font-style: normal;
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+        border-radius: 50%;
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    &.btn__primary {
+        height: 60px;
+
+        i {
+            color: $color-primary;
+            background-color: $color-white;
+        }
+
+        &:hover i {
+            color: $color-secondary;
+        }
+    }
+}
+
+.btn__secondary.btn__outlined.btn__custom {
+    border-color: #eaeaea;
+    color: $color-secondary;
+    overflow: visible;
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        color: $color-white;
+        background-color: $color-secondary;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    &:before {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        color: $color-white;
+        border-color: $color-primary;
+        background-color: $color-primary;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-primary;
+            background-color: $color-white;
+        }
+    }
+}
+
+.btn__primary.btn__outlined.btn__custom {
+    border-color: #eaeaea;
+    color: $color-primary;
+    overflow: visible;
+
+    .icon-arrow-right,
+    .icon-arrow-left {
+        color: $color-white;
+        background-color: $color-primary;
+        @include prefix(transition, all .3s linear, webkit moz ms o);
+    }
+
+    &:before {
+        display: none;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 20px;
+        right: 20px;
+        height: 2px;
+        background-color: $color-primary;
+    }
+
+    &:hover {
+        color: $color-white;
+        border-color: $color-primary;
+        background-color: $color-primary;
+
+        .icon-arrow-right,
+        .icon-arrow-left {
+            color: $color-primary;
+            background-color: $color-white;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .btn:not(.btn__link) {
+        font-size: 13px;
+        min-width: 120px;
+        height: 40px;
+    }
+}

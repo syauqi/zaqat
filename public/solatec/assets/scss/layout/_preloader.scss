@@ -1,0 +1,61 @@
+/*----------------------
+    Pre Loader
+-----------------------*/
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5000;
+    background-color: $color-white;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    .loading {
+        position: relative;
+        width: 80px;
+        height: 80px;
+
+        span {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 64px;
+            height: 64px;
+            border: 5px solid $color-primary;
+            border-radius: 50%;
+            animation: rotating 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+            border-color: $color-primary transparent transparent transparent;
+
+            &:nth-child(1) {
+                animation-delay: -0.45s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: -0.3s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: -0.15s;
+            }
+        }
+    }
+}
+
+/* Rotating Animation */
+@include keyframes(rotating) {
+    0% {
+        @include prefix(transform, rotate(0deg), webkit moz ms o);
+    }
+
+    100% {
+        @include prefix(transform, rotate(360deg), webkit moz ms o);
+    }
+}

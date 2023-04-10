@@ -1,0 +1,133 @@
+/*--------------------------
+    Project Name: Solatec
+    Version: 1.0
+    Author: 7oorof
+    Devloped by: Ahmed Abdallah (a.abdallah999@gmail.com)
+    Relase Date: July 2021
+---------------------------*/
+/*---------------------------
+      Table of Contents
+    -------------------------
+    
+    01- Global Styles
+    02- Helper Classes
+    03- Background & Colors
+    04- Typography
+    05- page title 
+    06- Buttons
+    07- Forms
+    08- Tabs
+    09- Icons
+    10- Breadcrumb
+    11- Pagination
+    12- Lists
+    13- Animations
+    14- Header & Navbar 
+    15- Accordions
+    16- Banners
+    17- Footer
+    18- Call to Action
+    19- Carousel
+    20- Slider
+    21- Video
+    22- Features
+    23- Fancybox
+    24- portfolio
+    25- Team
+    26- Testimonials
+    27- Clients
+    28- Blog
+    29- Contact
+    30- Pricing
+    31- Counters
+    32- Sidebar
+    33- About
+    34- Banners
+    35- Careers
+    36- Services
+    
+----------------------------*/
+
+/*-------------------------- 
+      Global Styles
+---------------------------*/
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: $color-white;
+    font-family: $font-body;
+    font-size: $body-font-size;
+    color: $color-body;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+a {
+    color: $color-primary;
+    @include prefix(transition, color .3s ease, webkit moz ms o);
+
+    &:hover {
+        color: darken($color-primary, 30%);
+        text-decoration: none;
+    }
+}
+
+section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*-------------------------
+     RESET Default Styles
+ --------------------------*/
+* {
+    outline: none;
+}
+
+button {
+    border: none;
+    padding: 0;
+}
+
+button,
+button:focus,
+.form-control,
+.form-control:focus {
+    outline: none;
+    background-color: transparent;
+    @include prefix(box-shadow, none, webkit moz ms o);
+}
+
+textarea {
+    resize: none
+}
+
+select {
+    background-color: transparent;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+    }
+}

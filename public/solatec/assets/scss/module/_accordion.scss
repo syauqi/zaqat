@@ -1,0 +1,81 @@
+/*----------------------
+    Accordions
+------------------------*/
+.accordion-item {
+    border: 2px solid #e7ebef;
+    background-color: $color-white;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 27px;
+
+    .accordion-item__title {
+        font-family: $font-heading;
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        display: block;
+        position: relative;
+        padding-right: 25px;
+        color: $color-secondary;
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        &:after {
+            position: absolute;
+            right: 0;
+            top: 0;
+            content: "\f067";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            background-color: transparent;
+            color: $color-secondary;
+            font-size: 10px;
+            text-align: center;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 50%;
+        }
+    }
+
+    &.opened {
+        border-color: $color-primary;
+
+        .accordion-item__header:not(.collapsed) {
+            .accordion-item__title {
+                color: $color-primary;
+
+                &:after {
+                    background-color: $color-primary;
+                    color: $color-white;
+                    content: "\f068";
+                }
+            }
+        }
+    }
+
+    .accordion-item__body {
+        padding-top: 20px;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .accordion-item {
+        padding: 10px 15px;
+
+        .accordion-item__title {
+            font-size: 14px;
+        }
+
+        .accordion-item .accordion-item__body p {
+            font-size: 13px;
+        }
+    }
+}

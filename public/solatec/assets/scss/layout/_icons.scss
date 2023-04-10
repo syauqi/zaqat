@@ -1,0 +1,85 @@
+/*------------------- 
+    Icons
+------------------*/
+.social-icons {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+
+    li {
+        margin-right: 10px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #eaeaea;
+            @include prefix(transition, all 0.4s linear, webkit moz o);
+
+            i {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 11px;
+                color: $color-white;
+                background-color: $color-primary;
+                @include prefix(transition, all 0.4s linear, webkit moz o);
+            }
+
+            &:hover {
+                border-color: $color-primary;
+            }
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.icon-arrow-right {
+    font-size: 65%;
+}
+
+.custom-icon {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 54px;
+        width: 54px;
+        opacity: 0.1;
+        border-radius: 22px;
+        background-color: $color-primary;
+    }
+
+    i {
+        margin-left: 10px;
+    }
+
+    &-right {
+        text-align: right;
+
+        &:before {
+            left: auto;
+            right: 0;
+        }
+
+        i {
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+}

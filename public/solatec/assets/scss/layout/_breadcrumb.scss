@@ -1,0 +1,30 @@
+/*-------------------------
+    Breadcrumb
+--------------------------*/
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    position: relative;
+
+    a {
+        color: $color-heading;
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f105";
+}
+
+/* Extra Small Devices */
+@include xs-sm-screens {
+
+    .breadcrumb-item a,
+    .breadcrumb-item+.breadcrumb-item {
+        font-size: 12px;
+    }
+}

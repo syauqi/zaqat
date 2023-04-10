@@ -1,0 +1,78 @@
+/*-------------------
+    lists
+-------------------*/
+.list-items li {
+    position: relative;
+    padding-left: 32px;
+    font-size: 15px;
+    font-weight: 700;
+    color: $color-heading;
+    margin-bottom: 9px;
+
+    &:before {
+        content: "\f00c";
+        font-family: 'Fontawesome';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        font-size: 10px;
+        font-weight: 400;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 50%;
+        color: $color-white;
+        background-color: $color-primary;
+        @include prefix(transform, translateY(-50%), webkit moz ms o);
+    }
+}
+
+.list-items-light li {
+    color: $color-white;
+
+    &:before {
+        background-color: $color-white;
+        color: $color-primary;
+    }
+}
+
+.list-items-layout2 {
+    li {
+        padding-left: 25px;
+
+        &:before {
+            background-color: transparent;
+            color: $color-primary;
+        }
+    }
+
+    &.list-items-light li {
+        color: $color-white;
+
+        &:before {
+            color: $color-white;
+        }
+    }
+}
+
+@media (max-width:992px) {
+    .list-items-layout2 {
+        -ms-flex-direction: column;
+        flex-direction: column;
+
+        li {
+            -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+    }
+}
+
+/* Extra Small Devices */
+@include xs-sm-screens {
+    .list-items li {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}

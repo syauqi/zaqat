@@ -1,0 +1,78 @@
+//  MIXINS
+
+// Media Query Mixins 
+
+// Large Screens 
+@mixin lg-screens {
+    @media (min-width: 992px) and (max-width: 1200px) {
+        @content;
+    }
+}
+
+// Medium Screens
+@mixin md-screens {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+
+// Small Screens
+@mixin sm-screens {
+    @media (min-width: 576px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// Extra Small Screens
+@mixin xs-screens {
+    @media (min-width: 320px) and (max-width: 575px) {
+        @content;
+    }
+}
+
+// Extra Small and Small Screens
+@mixin xs-sm-screens {
+    @media (min-width: 320px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+// Animation Mixin 
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};
+}
+
+// Add prefixes before CSS3 Elements
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    #{$property}: $value;
+}

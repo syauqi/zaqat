@@ -1,0 +1,76 @@
+/*-----------------------
+    careers
+------------------------*/
+.careers {
+    .slick-slide {
+        margin: 15px;
+    }
+
+    .slick-list {
+        margin: -15px;
+    }
+
+    .slick-dots {
+        margin-top: 15px;
+    }
+}
+
+.job-item {
+    padding: 40px;
+    border-radius: 7px;
+    background-color: $color-white;
+    box-shadow: 0 0 12px 0 rgba(40, 40, 40, 0.08);
+    @include prefix(transition, all 0.4s ease, webkit moz ms o);
+
+    &:hover {
+        box-shadow: 0 0 15px 0 rgba(40, 40, 40, 0.1);
+        @include prefix(transform, translateY(-2px), webkit moz ms o);
+    }
+
+    .job__meta {
+        margin-bottom: 32px;
+    }
+
+    .job__type {
+        font-size: 13px;
+        padding: 3px 10px;
+        border-radius: 3px;
+        margin-right: 10px;
+        text-transform: capitalize;
+        color: $color-white;
+        background-color: $color-primary;
+    }
+
+    .job__location {
+        font-size: 13px;
+    }
+
+    .job__title {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    .job__desc {
+        font-size: 15px;
+    }
+
+    .btn {
+        height: 40px;
+        min-width: 140px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .job-item {
+        padding: 20px;
+
+        .job__meta {
+            margin-bottom: 20px;
+        }
+
+        .job__title {
+            margin-bottom: 10px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+/*----------------------
+     Dividers 
+------------------------*/
+.divider__line {
+  position: relative;
+  height: 2px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 28px;
+    background-color: #e7ebef;
+  }
+}
+
+.divider__line.divider__center:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.divider__line.divider__sm:after {
+  width: 40px;
+}
+
+.divider__theme:after {
+  background-color: $color-primary;
+}
+
+.divider__white:after {
+  background-color: $color-white;
+}
+
+@include xs-sm-screens {
+  .divider__line {
+    margin-bottom: 20px;
+  }
+}

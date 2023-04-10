@@ -1,0 +1,303 @@
+/*----------------------------
+    Contact
+----------------------------*/
+.contact-panel__title {
+    font-size: 24px;
+}
+
+.contact-info-box {
+    margin-bottom: 30px;
+
+    .contact__info-box-title {
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .contact__info-list {
+        margin-bottom: 0;
+
+        li {
+            font-size: 14px;
+            line-height: 1.9;
+
+            a {
+                color: $color-body;
+            }
+        }
+    }
+}
+
+.contact-info-layout2 {
+    .contact-info-box {
+        .contact__info-box-icon {
+            flex: 0 0 70px;
+
+            i {
+                width: 48px;
+                height: 48px;
+                line-height: 48px;
+                text-align: center;
+                border-radius: 50%;
+                display: block;
+                color: $color-white;
+                background-color: $color-primary;
+            }
+        }
+
+        .contact__info-box-title {
+            margin-bottom: 10px;
+        }
+
+        .contact__info-list li {
+            margin-bottom: 2px;
+        }
+    }
+
+    .cta__banner {
+        border-radius: 4px;
+        max-width: 530px;
+        padding: 50px 130px 50px 50px;
+        margin-left: 20px;
+        margin-top: -185px;
+        z-index: 4;
+        margin-bottom: 30px;
+
+        &:after {
+            content: "\e91e";
+            font-family: icomoon;
+            font-size: 200px;
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            z-index: 1;
+            line-height: 1;
+            color: rgba($color-white, 0.1);
+        }
+
+        .cta__title {
+            line-height: 1.4;
+            margin-bottom: 17px;
+        }
+
+        .cta__title,
+        .cta__desc,
+        .btn {
+            position: relative;
+            z-index: 2;
+        }
+
+        .btn {
+            i {
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                color: $color-primary;
+                background-color: $color-white;
+                @include prefix(transition, all 0.3s ease, webkit moz ms o);
+            }
+
+            &:hover i {
+                @include prefix(transform, translateX(6px), webkit moz ms o);
+            }
+        }
+    }
+}
+
+.contact__number {
+    i {
+        font-size: 17px;
+        color: $color-primary;
+        margin-right: 10px;
+    }
+
+    a {
+        color: $color-heading;
+        font-family: $font-heading;
+        font-size: 22px;
+        line-height: 1;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.contact-panel {
+    background-color: $color-white;
+    padding: 80px 80px 40px;
+    border-radius: 15px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 1px 73px 0px rgba(40, 40, 40, 0.15);
+
+    .contact__panel-info {
+        flex: 0 0 32%;
+        max-width: 32%;
+        padding-bottom: 40px;
+        background-color: #e4f2e2;
+        border-radius: 10px;
+        padding: 50px;
+    }
+
+    .contact-info-box .contact__info-box-title {
+        margin-bottom: 11px;
+    }
+
+    .contact__panel-form {
+        flex: 0 0 68%;
+        max-width: 68%;
+        padding-left: 50px;
+    }
+
+    .nice-select,
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact__panel-title {
+        font-size: 24px;
+    }
+
+    .contact__panel-desc {
+        font-size: 15px;
+    }
+
+    .nice-select .list {
+        width: 100%;
+    }
+
+    .contact-info-box {
+        margin-bottom: 28px;
+    }
+}
+
+.contact-layout3 {
+    .contact-panel {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .contact-panel__banner,
+    .contact-panel__form {
+        padding: 50px;
+    }
+
+    .testimonial__desc {
+        font-style: normal;
+    }
+
+    .testimonial__thumb {
+        margin-right: 30px;
+    }
+
+    .testimonial__meta-title {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:1200px) {
+
+    .contact-layout2 {
+        .col-inner {
+            padding-right: 50px;
+        }
+
+        .contact-panel {
+            margin-bottom: -50px;
+            padding: 40px 50px 50px;
+        }
+    }
+
+    .contact-layout3 {
+        .contact-panel {
+            padding: 40px 50px 50px;
+        }
+    }
+}
+
+/* Large Size Screens */
+@include lg-screens {
+    .contact-panel {
+        padding: 40px 20px 0;
+
+        &:after {
+            left: 20px;
+            width: -webkit-calc(100% - 40px);
+            width: -moz-calc(100% - 40px);
+            width: -o-calc(100% - 40px);
+            width: calc(100% - 40px);
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@media (max-width:992px) {
+    .contact-panel {
+        background-color: #fff;
+        padding: 20px;
+        flex-direction: column;
+
+        &:after {
+            left: 20px;
+            width: -webkit-calc(100% - 40px);
+            width: -moz-calc(100% - 40px);
+            width: -o-calc(100% - 40px);
+            width: calc(100% - 40px);
+        }
+    }
+
+    .contact-panel .contact__panel-info,
+    .contact-panel .contact__panel-form {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .contact-info-layout2 .cta__banner {
+        margin: 0;
+    }
+
+    .google-map-layout2 .contact-info-carousel {
+        position: static;
+        margin: 0 auto 30px;
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.12);
+    }
+
+    .contact-layout3 {
+
+        .contact-panel__banner,
+        .contact-panel__form {
+            padding: 20px;
+        }
+
+        .testimonial__thumb {
+            margin-right: 20px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .contact-panel {
+        border-radius: 7px;
+    }
+
+    .contact-panel__title {
+        font-size: 18px;
+    }
+
+    .contact-info-layout2 .cta__banner {
+        padding: 20px;
+    }
+
+    .contact-panel .contact__panel-info-top,
+    .contact-panel .contact__panel-info-bottom {
+        padding: 20px;
+    }
+}

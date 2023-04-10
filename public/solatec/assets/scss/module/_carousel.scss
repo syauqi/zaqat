@@ -1,0 +1,119 @@
+/*----------------------
+    Carousel
+-----------------------*/
+.slick-list {
+    margin: 0 -15px;
+}
+
+.slick-slide {
+    margin: 0 15px;
+}
+
+.m-slides-0 {
+    .slick-list {
+        margin: 0;
+    }
+
+    .slick-slide {
+        margin: 0;
+    }
+}
+
+.gutter-20 {
+    .slick-list {
+        margin-right: -20px !important;
+        margin-left: -20px !important;
+    }
+
+    .slick-slide {
+        margin-right: 20px !important;
+        margin-left: 20px !important;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    @include prefix(transform, translateY(-50%), webkit moz ms o);
+    color: rgba($color-heading, 70%);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 0;
+    z-index: 3;
+    @include prefix(transition, all 0.3s linear, webkit moz ms o);
+
+    &:hover {
+        color: $color-heading
+    }
+
+    &.slick-next,
+    &.slick-prev {
+        &:before {
+            font-family: 'icomoon';
+            font-size: 45px;
+        }
+    }
+
+    &.slick-next {
+        right: 0;
+
+        &:before {
+            content: "\e93b";
+        }
+    }
+
+    &.slick-prev {
+        left: 0;
+
+        &:before {
+            content: "\e939";
+        }
+    }
+}
+
+.carousel-arrows-light .slick-arrow {
+    color: rgba($color-white, 70%);
+
+    &:hover {
+        color: $color-primary
+    }
+}
+
+.slick-dots {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0;
+    z-index: 2;
+
+    li {
+        display: inline-block;
+        margin: 5px;
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 3px solid $color-body;
+        background-color: $color-body;
+
+        button {
+            font-size: 0;
+            width: 100%;
+        }
+
+        &.slick-active {
+            border-color: $color-primary;
+            background-color: transparent;
+        }
+    }
+}
+
+.carousel-dots-light .slick-dots li:not(.slick-active) {
+    border-color: $color-white;
+    background-color: $color-white;
+}

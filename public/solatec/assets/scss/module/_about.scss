@@ -1,0 +1,134 @@
+/*----------------------
+    About
+-----------------------*/
+.about__img {
+    position: relative;
+
+    img {
+        border-radius: 3px;
+    }
+}
+
+.about-layout1 {
+    .text__icon {
+        color: $color-primary;
+        font-size: 75px;
+        line-height: 1;
+        margin: 30px 0 35px;
+    }
+
+    .video-has-img {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+}
+
+.about-layout2 {
+    .about__img {
+        margin-bottom: 60px;
+
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .cta__banner {
+        position: absolute;
+        bottom: -40px;
+        right: 40px;
+        padding: 30px;
+        max-width: 330px;
+        border-radius: 7px;
+
+        &:before {
+            font-family: icomoon;
+            content: "\e930";
+            font-size: 120px;
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            z-index: 1;
+            color: rgba($color-white, 0.10);
+        }
+
+        .cta__title {
+            font-size: 25px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .cta__desc,
+        .cta__title {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+/* Extra Large Size Screens */
+@media (min-width:1200px) {
+    .about-layout1 {
+        .counter-item {
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .text__icon {
+            margin-top: 0;
+        }
+    }
+
+    .about-layout2 {
+        .about__img {
+            margin-right: 60px;
+        }
+    }
+}
+
+@media (min-width:1300px) {
+    .about-layout1 {
+        .heading-layout2 .heading__title {
+            margin-left: -80px;
+        }
+
+        .inner-wrapper {
+            padding-right: 70px;
+        }
+
+        .video-banner-layout2 {
+            position: relative;
+            margin-left: 30px;
+        }
+
+        .about__text {
+            margin-left: 50px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .about-layout1 .cta__banner {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-screens {
+    .about-layout2 .cta__banner {
+        padding: 15px;
+
+        .cta__title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .cta__desc {
+            font-weight: 400 !important;
+        }
+    }
+}

@@ -1,0 +1,190 @@
+/*-----------------------
+     fancybox 
+------------------------*/
+.fancybox-item {
+    position: relative;
+    margin-bottom: 40px;
+
+    .fancybox__icon {
+        position: relative;
+        font-size: 55px;
+        line-height: 1;
+        color: $color-primary;
+        margin-bottom: 22px;
+    }
+
+    .fancybox__title {
+        font-size: 18px;
+        margin-bottom: 16px;
+        @include prefix(transition, all 0.3s ease, webkit moz ms o);
+    }
+
+
+    .fancybox__desc {
+        margin-bottom: 0;
+    }
+
+    &:hover .fancybox__icon {
+        @include animation("slideTopDown 1s infinite alternate");
+    }
+
+    &:hover .fancybox__title {
+        color: $color-primary;
+    }
+}
+
+.fancybox-light {
+
+    .fancybox-item .fancybox__icon,
+    .fancybox-item .fancybox__title,
+    .fancybox-item .fancybox__desc,
+    .fancybox-item:hover .fancybox__title {
+        color: $color-white;
+    }
+}
+
+.fancybox-layout1 {
+    .fancybox-wrapper {
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
+
+        >[class*="col-"] {
+            .fancybox-item {
+                border-right: 1px solid #eaeaea;
+            }
+
+            &:last-child .fancybox-item {
+                border-right: 0;
+            }
+        }
+    }
+
+    .fancybox-item {
+        padding: 35px;
+        margin-bottom: 0;
+        overflow: hidden;
+        background-color: $color-white;
+
+        .fancybox__title {
+            margin-bottom: 9px;
+        }
+
+        .icon-filled {
+            margin-top: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            color: $color-white;
+            background-color: $color-secondary;
+            @include prefix(transition, all 0.3s ease, webkit moz ms o);
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+
+        &:hover .icon-filled {
+            background-color: $color-primary;
+        }
+    }
+
+    .cta__banner {
+        padding: 25px 30px;
+        max-width: 320px;
+        border-radius: 7px;
+
+        &:before {
+            font-family: icomoon;
+            content: "\e930";
+            font-size: 120px;
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            z-index: 1;
+            color: rgba($color-white, 0.10);
+        }
+
+        .cta__title {
+            font-size: 25px;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+
+        .cta__desc,
+        .cta__title {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .fancybox-layout1 .cta__banner {
+        margin: 30px 0;
+        height: auto !important;
+    }
+}
+
+@media (min-width:1200px) {
+    .slider+.fancybox-layout1 {
+        margin-top: -50px;
+        position: relative;
+        z-index: 3;
+    }
+
+    .fancybox-layout1 {
+        .fancybox-wrapper {
+            margin-left: -30px;
+        }
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .fancybox-item {
+        margin-bottom: 30px;
+    }
+
+    .fancybox-item .fancybox__icon {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    .fancybox-item .fancybox__title {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+
+    .fancybox-layout1 {
+        .fancybox-wrapper {
+            >[class*="col-"] {
+                .fancybox-item {
+                    border-bottom: 1px solid #eaeaea;
+                }
+
+                &:last-child .fancybox-item {
+                    border-bottom: 0;
+                }
+            }
+        }
+
+        .cta__banner {
+            margin: 30px 0;
+            max-width: 100%;
+            height: auto !important;
+
+            .cta__title {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .cta__desc {
+                font-weight: 400 !important;
+            }
+        }
+    }
+}

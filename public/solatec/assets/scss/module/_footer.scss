@@ -1,0 +1,217 @@
+/*-------------------------
+    Footer
+--------------------------*/
+.footer {
+    background-color: #161616;
+
+    .social-icons a {
+        border: 2px solid rgba(234, 234, 234, 0.15);
+
+        i {
+            color: $color-heading;
+        }
+
+        &:hover {
+            border-color: $color-gray;
+
+            a {
+                color: $color-white;
+            }
+        }
+    }
+
+    .btn__download {
+        height: 60px;
+        min-width: 190px;
+    }
+
+    .btn__location {
+        font-size: 14px;
+        font-weight: 700;
+        color: $color-white;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.footer-primary {
+    padding-top: 120px;
+    padding-bottom: 70px;
+}
+
+.footer-widget {
+    margin-bottom: 30px;
+}
+
+.footer-widget-title {
+    color: $color-white;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 33px;
+}
+
+.footer-widget-nav li a,
+.copyright__nav li a {
+    display: block;
+    position: relative;
+    color: $color-body;
+    font-size: 14px;
+    margin-bottom: 11px;
+
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.copyright__nav li {
+    a {
+        margin-right: 14px;
+        padding-right: 14px;
+        margin-bottom: 3px;
+
+        &:after {
+            content: "-";
+            position: absolute;
+            right: 0;
+            color: $color-body;
+        }
+    }
+
+    &:last-child a:after {
+        display: none;
+    }
+}
+
+.footer-widget-about {
+    .btn {
+        color: $color-primary;
+
+        .icon-arrow-right {
+            color: $color-white;
+            background-color: $color-primary;
+        }
+
+        &:hover {
+            color: $color-white;
+
+            .icon-arrow-right {
+                color: $color-secondary;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.footer-widget-contact {
+    p {
+        font-size: 14px;
+    }
+}
+
+.footer-copyrights {
+    background-color: #121212;
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    p {
+        font-size: 13px;
+
+        a:hover {
+            color: $color-white;
+        }
+    }
+}
+
+/* Scroll Top Button */
+#scrollTopBtn {
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 45px;
+    height: 45px;
+    opacity: 0;
+    z-index: 1000;
+    font-size: 18px;
+    border-radius: 50%;
+    color: $color-white;
+    background-color: $color-primary;
+    overflow: hidden;
+    @include prefix(transition, all .3s ease-in-out, webkit moz ms o);
+
+    &:hover {
+        background-color: $color-secondary;
+    }
+}
+
+#scrollTopBtn.actived {
+    right: 30px;
+    opacity: 1;
+}
+
+@media (min-width: 1200px) {
+    .footer-widget-about {
+        padding-right: 140px;
+    }
+
+    .footer-widget-align-right {
+        text-align: right;
+
+        .social-icons {
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .footer-widget-nav li a,
+    .footer__copyright-links li a {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Medium Size Screens */
+@include md-screens {
+    .footer-primary {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Mobile Phones and tablets */
+@include xs-sm-screens {
+    .footer-primary {
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+
+    .footer-widget {
+        margin-bottom: 20px;
+    }
+
+    .footer-widget-title {
+        margin-bottom: 10px;
+    }
+
+    .footer-copyrights {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Extra Small Devices */
+@include xs-screens {
+    #scrollTopBtn {
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    #scrollTopBtn.actived {
+        right: 20px;
+    }
+}
