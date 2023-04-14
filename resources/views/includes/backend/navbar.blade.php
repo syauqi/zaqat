@@ -22,13 +22,14 @@
                     </a>
                 </li>
                 <li class="level-menu outside">
-                    <a class="nav-link" href="{{('/dashboard/catatan-pelajaran/tambah-catatan')}}">
-                        <i data-feather="plus-square"></i>
+                    <a class="nav-link" style="background-color: rgba(168, 216, 148, 0.6); color: rgba(90, 152, 63, 1)
+                    " href="{{('/dashboard/catatan-pelajaran/tambah-catatan')}}">
+                        <i data-feather="plus-square" style="stroke: rgba(90, 152, 63, 1);"></i>
                         <span class="d-none d-sm-none d-md-inline-block">
-                            Catatan Pelajaran
+                           Pengumpulan Zakat
                         </span>
                         <span class="d-none d-sm-inline-block d-md-none">
-                            <small>Catatan</small>
+                            <small>Pengumpulan Zakat</small>
                         </span>
                     </a>
                 </li>
@@ -93,11 +94,11 @@
                 <li class="profile-nav onhover-dropdown p-0 ml-2 mr-0">
                     <div class="media profile-media">
                         <img class="b-r-10"
-                            src="https://source.boringavatars.com/beam/120/{{Auth::user()->name}}?square&colors=FAD089,FF9C5B,F5634A,ED303C,3B8183"
+                            src="https://ui-avatars.com/api/?name={{Auth::user()->name}}&background=5a983f&color=fff"
                             width="40px">
                         <div class="media-body">
                             <span>{{Auth::user()->name}}</span>
-                            <p class="mb-0 font-roboto">👨🏻‍🎓 Mahasiswa
+                            <p class="mb-0 font-roboto">👳‍♂️ Pengurus DKM
                                 <i class="middle fa fa-angle-down"></i>
                             </p>
                         </div>
