@@ -9,23 +9,20 @@
             <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
                 data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
                 <div class="slide-item align-v-h bg-overlay bg-overlay-2">
-                    <div class="bg-img"><img src="assets/images/sliders/1.jpg" alt="slide img"></div>
+                    <div class="bg-img"><img src="{{ url('solatec/assets/images/sliders/8.jpg') }}" alt="slide img"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
                                 <div class="slide__body">
-                                    <span class="slide__subtitle">Complete Commercial, Residential & Industrial Solar
-                                        Systems</span>
-                                    <h2 class="slide__title">We Invest In The Future Of Planet!</h2>
-                                    <p class="slide__desc">As a world wide distributor of solar supplies we endeavor to
-                                        provide fast and
-                                        knowledgeable service, we can get you materials by sea or air.
+                                    <span class="slide__subtitle">Pengelolaan, Distribusi dan Pelaporan Zakat Fitrah</span>
+                                    <h2 class="slide__title">Kami Mendigitalisasi Pembayaran Zakat Fitrah di Indonesia</h2>
+                                    <p class="slide__desc">Jadikan pengalaman pembayaran dan pengelolaan zakat fitrah menjadi lebih mudah dan nyaman dengan aplikasi Zaqat.</p>
                                     </p>
                                     <div class="d-flex">
                                         <a href="services.html" class="btn btn__primary mr-30">
-                                            <i class="icon-arrow-right"></i><span>More About Us</span>
+                                            <i class="icon-arrow-right"></i><span>Tentang Kami</span>
                                         </a>
-                                        <a href="about-us.html" class="btn btn__white">More About Us!</a>
+                                        <a href="about-us.html" class="btn btn__white">Pengumpulan Zakat</a>
                                     </div>
                                 </div><!-- /.slide__body -->
                             </div><!-- /.col-xl-8 -->
@@ -33,22 +30,19 @@
                     </div><!-- /.container -->
                 </div><!-- /.slide-item -->
                 <div class="slide-item align-v-h bg-overlay">
-                    <div class="bg-img"><img src="assets/images/sliders/2.jpg" alt="slide img"></div>
+                    <div class="bg-img"><img src="{{ url('solatec/assets/images/sliders/9.jpg') }}" alt="slide img"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
                                 <div class="slide__body">
-                                    <span class="slide__subtitle">Complete Commercial, Residential & Industrial Solar
-                                        Systems</span>
-                                    <h2 class="slide__title">Energize Society By Reliable Energy!</h2>
-                                    <p class="slide__desc">As a world wide distributor of solar supplies we endeavor to
-                                        provide fast and
-                                        knowledgeable service, we can get you materials by sea or air.</p>
+                                    <span class="slide__subtitle">Pengelolaan, Distribusi dan Pelaporan Zakat Fitrah</span>
+                                    <h2 class="slide__title">Zaqat Membantu DKM Mengelola Data Zakat Fitrah!</h2>
+                                    <p class="slide__desc">Aplikasi kami dibuat khusus untuk DKM dari semua masjid agar mempunyai sistem zakat yang efisien dan optimal.</p>
                                     <div class="d-flex">
                                         <a href="services.html" class="btn btn__primary mr-30">
-                                            <i class="icon-arrow-right"></i><span>More About Us</span>
+                                            <i class="icon-arrow-right"></i><span>Tentang Kami</span>
                                         </a>
-                                        <a href="about-us.html" class="btn btn__white">More About Us!</a>
+                                        <a href="about-us.html" class="btn btn__white">Pengumpulan Zakat</a>
                                     </div>
                                 </div><!-- /.slide__body -->
                             </div><!-- /.col-xl-8 -->
