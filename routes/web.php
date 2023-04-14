@@ -18,14 +18,15 @@ Route::get('/', function () {
     return view('pages.frontend.index');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
+Route::prefix('dashboard')
+    ->middleware(['auth'])
+    ->group(function () {
+        /* -------------------------- Dashboard Index Pages ------------------------- */
+        Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
+        /* ------------------------- Jadwal Pelajaran Pages ------------------------- */
+        Route::get('/jadwal-pelajaran', 'App\Http\Controllers\ScheduleController@index');
+        Route::get('/jadwal-pelajaran/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
+        Route::resource('schedules', 'App\Http\Controllers\ScheduleController');
+    });
 
 require __DIR__.'/auth.php';
