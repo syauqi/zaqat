@@ -33,7 +33,7 @@
       </div><!-- /.header-top -->
       <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="/">
                   <img src="{{ url('solatec/assets/images/logo/logo.png') }}" class="logo" alt="logo">
               </a>
               <button class="navbar-toggler" type="button">
@@ -42,19 +42,19 @@
               <div class="collapse navbar-collapse" id="mainNavigation">
                   <ul class="navbar-nav">
                       <li class="nav__item">
-                          <a href="index.html" class="nav__item-link active">Beranda</a>
+                          <a href="index.html" class="nav__item-link">Beranda</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="about-us.html" class="nav__item-link">Tentang Kami</a>
+                          <a href="{{url('about')}}" class="nav__item-link">Tentang Kami</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="blog.html" class="nav__item-link">Artikel</a>
+                          <a href="{{url('article')}}" class="nav__item-link">Artikel</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                        <a href="blog.html" class="nav__item-link">Galeri</a>
+                        <a href="{{url('gallery')}}" class="nav__item-link">Galeri</a>
                     </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="contact-us.html" class="nav__item-link">Hubungi Kami</a>
+                          <a href="{{url('contact')}}" class="nav__item-link">Hubungi Kami</a>
                       </li><!-- /.nav-item -->
                   </ul><!-- /.navbar-nav -->
                   <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
