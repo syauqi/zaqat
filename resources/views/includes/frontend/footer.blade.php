@@ -6,47 +6,40 @@
          <div class="container">
              <div class="row">
                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 footer-widget footer-widget-contact">
-                     <h6 class="footer-widget-title">Quick Contact</h6>
+                     <h6 class="footer-widget-title">Hubungi Kami</h6>
                      <div class="footer-widget-content">
-                         <p class="mb-20">If you have any questions or need help, feel free to contact with our team.
+                         <p class="mb-20">Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi tim kami.
                          </p>
                          <div class="contact__number d-flex align-items-center mb-30">
                              <i class="icon-phone"></i>
-                             <a href="tel:5565454117" class="color-primary">55 654 541 17</a>
+                             <a href="tel:5565454117" class="color-primary">085156162840</a>
                          </div><!-- /.contact__numbr -->
-                         <p class="mb-20">2307 Beverley Rd Brooklyn, New York 11226 United States.</p>
-                         <a href="#" class="btn__location">
-                             <i class="icon-location"></i>
-                             <span>Get Directions</span>
-                         </a>
+                         <p class="mb-20">2307 Apartement Cibuan, Jakarta 11226 Indonesia.</p>
                      </div><!-- /.footer-widget-content -->
                  </div><!-- /.col-xl-3 -->
                  <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-widget footer-widget-nav">
-                     <h6 class="footer-widget-title">Company</h6>
+                     <h6 class="footer-widget-title">Aplikasi</h6>
                      <div class="footer-widget-content">
                          <nav>
                              <ul class="list-unstyled">
-                                 <li><a href="about-us.html">About Us</a></li>
-                                 <li><a href="leadership-team.html">Leadership Team</a></li>
-                                 <li><a href="blog.html">News & Media</a></li>
-                                 <li><a href="projects-grid.html">Case Studies</a></li>
-                                 <li><a href="projects-grid.html">Our Projects</a></li>
-                                 <li><a href="contacs.html">Contacts</a></li>
+                                 <li><a href="about-us.html">Beranda</a></li>
+                                 <li><a href="leadership-team.html">Tentang Kami</a></li>
+                                 <li><a href="blog.html">Hubungi Kami</a></li>
+                                 <li><a href="blog.html">Tentang Aplikasi</a></li>
+                                 <li><a href="blog.html">Dukung Pembuat</a></li>
                              </ul>
                          </nav>
                      </div><!-- /.footer-widget-content -->
                  </div><!-- /.col-xl-2 -->
                  <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-widget footer-widget-nav">
-                     <h6 class="footer-widget-title">Services</h6>
+                     <h6 class="footer-widget-title">Layanan</h6>
                      <div class="footer-widget-content">
                          <nav>
                              <ul class="list-unstyled">
-                                 <li><a href="#">Wind Generators</a></li>
-                                 <li><a href="#">Solar PV Materials</a></li>
-                                 <li><a href="#">Battery Materials</a></li>
-                                 <li><a href="#">Refined Products</a></li>
-                                 <li><a href="#">Solar Modules</a></li>
-                                 <li><a href="#">Biodiesel Fuel</a></li>
+                                 <li><a href="#">Pengumpulan Zakat</a></li>
+                                 <li><a href="#">Laporan Zakat</a></li>
+                                 <li><a href="#">Permohonan Zakat</a></li>
+                                 <li><a href="#">Konsultasi Zakat</a></li>
                              </ul>
                          </nav>
                      </div><!-- /.footer-widget-content -->
@@ -56,16 +49,16 @@
                      <div class="footer-widget-content">
                          <nav>
                              <ul class="list-unstyled">
-                                 <li><a href="#">Terms & Conditions</a></li>
-                                 <li><a href="#">Shipping Policy</a></li>
-                                 <li><a href="#">Delivery Tips</a></li>
-                                 <li><a href="#">Returns</a></li>
+                                 <li><a href="#">Syarat & Ketentuan</a></li>
+                                 <li><a href="#">Laporkan Pungli</a></li>
+                                 <li><a href="#">Kalkulator Zakat</a></li>
+                                 <li><a href="#">Ajukan Fitur</a></li>
                              </ul>
                          </nav>
                      </div><!-- /.footer-widget-content -->
                  </div><!-- /.col-xl-2 -->
                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 footer-widget footer-widget-align-right">
-                     <h6 class="footer-widget-title">Products Catalogue</h6>
+                     <h6 class="footer-widget-title">Pedoman Aplikasi</h6>
                      <div class="footer-widget-content">
                          <a href="request-quote.html" class="btn btn__primary btn__primary-style2 btn__download mb-60">
                              <i class="icon-download"></i>
@@ -93,8 +86,8 @@
                          </ul>
                      </nav>
                      <p class="mb-0">
-                         <span class="color-gray">&copy; 2022 Solatec, All Rights Reserved. With Love by</span>
-                         <a href="http://themeforest.net/user/7oroof">7oroof.com</a>
+                         <span class="color-gray">&copy; 2023 Zaqat, All Rights Reserved. With Love by</span>
+                         <a href="http://github.com/syauqi">Syauqi</a>
                      </p>
                  </div><!-- /.col-lg-12 -->
              </div><!-- /.row -->
