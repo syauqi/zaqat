@@ -3,20 +3,42 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
+/* -------------------------------------------------------------------------- */
+/*                               Frontend Routes                              */
+/* -------------------------------------------------------------------------- */
+
+
+/* ------------------------------ Landing Page ------------------------------ */
 Route::get('/', function () {
     return view('pages.frontend.index');
 });
+
+/* ----------------------------- Features Page ------------------------------ */
+Route::get('/about', function () {
+    return view('pages.frontend.about');
+});
+
+/* ------------------------------ Article Page ------------------------------ */
+Route::get('/article', function () {
+    return view('pages.frontend.article');
+});
+
+/* ------------------------------ Gallery Page ------------------------------ */
+Route::get('/gallery', function () {
+    return view('pages.frontend.gallery');
+});
+
+/* ------------------------------ Contact Page ------------------------------ */
+Route::get('/contact', function () {
+    return view('pages.frontend.contact');
+});
+
+
+/* -------------------------------------------------------------------------- */
+/*                               Backend Routes                               */
+/* -------------------------------------------------------------------------- */
+
 
 Route::prefix('dashboard')
     ->middleware(['auth'])
