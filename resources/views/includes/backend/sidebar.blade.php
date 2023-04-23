@@ -34,18 +34,18 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title" href="#">
+                    <a class="sidebar-link sidebar-title">
                         <i data-feather="book"></i>
                         <span>Data Muzakki</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li class="active">
-                            <a href="{{url('/dashboard/jadwal-pelajaran')}}">
+                            <a href="{{url('/dashboard/muzakki/')}}">
                                 Master Data Muzakki
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/jadwal-pelajaran/atur-jadwal')}}">
+                            <a href="{{url('/dashboard/muzakki/create')}}">
                                 Atur & Tambah Data Muzakki
                             </a>
                         </li>
@@ -59,12 +59,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran')}}">
+                            <a href="{{url('/dashboard/mustahik/')}}">
                                 Master Data Mustahik
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran/tambah-catatan')}}">
+                            <a href="{{url('/dashboard/mustahik/create')}}">
                                 Atur & Tambah Data Mustahik
                             </a>
                         </li>
@@ -78,12 +78,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/galeri-foto')}}">
+                            <a href="{{url('/dashboard/kategori_mustahik/')}}">
                                 Semua Kategori Mustahik
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/galeri-foto/tambah-foto')}}">
+                            <a href="{{url('/dashboard/kategori_mustahik/create')}}">
                                 Tambah Kategori Mustahik
                             </a>
                         </li>
@@ -104,12 +104,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/bookmarks')}}">
+                            <a href="{{url('/dashboard/pengumpulan_zakat')}}">
                                 Data Pengumpulan Zakat Fitrah
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/bookmarks/tambah-bookmarks')}}">
+                            <a href="{{url('/dashboard/pengumpulan_zakat/create')}}">
                                 Tambah Pengumpulan Zakat Fitrah
                             </a>
                         </li>
@@ -123,12 +123,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/bookmarks')}}">
+                            <a href="{{url('/dashboard/distribusi_zakat')}}">
                                 Data Distribusi Zakat Fitrah
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/bookmarks/tambah-bookmarks')}}">
+                            <a href="{{url('/dashboard/distribusi_zakat/create')}}">
                                 Tambah Data Distribusi Zakat Fitrah
                             </a>
                         </li>
@@ -144,14 +144,14 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/whiteboard')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/laporan_pengumpulan')}}">
                         <i data-feather="clipboard"></i>
                         <span>Laporan Pengumpulan</span>
                     </a>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/whiteboard')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/laporan_distribusi')}}">
                         <i data-feather="clipboard"></i>
                         <span>Laporan Distribusi</span>
                     </a>
@@ -172,12 +172,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran')}}">
+                            <a href="{{url('/dashboard/articles')}}">
                                 Data Artikel
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/catatan-pelajaran/tambah-catatan')}}">
+                            <a href="{{url('/dashboard/articles/create')}}">
                                 Tulis & Tambah Artikel Baru
                             </a>
                         </li>
@@ -191,12 +191,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/galeri-foto')}}">
+                            <a href="{{url('/dashboard/galleries')}}">
                                 Semua Galeri & Foto
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/galeri-foto/tambah-foto')}}">
+                            <a href="{{url('/dashboard/galleries/create')}}">
                                 Upload Foto Baru
                             </a>
                         </li>

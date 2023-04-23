@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -10,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 
 /* ------------------------------ Landing Page ------------------------------ */
+
 Route::get('/', function () {
     return view('pages.frontend.index');
 });
@@ -43,12 +43,26 @@ Route::get('/contact', function () {
 Route::prefix('dashboard')
     ->middleware(['auth'])
     ->group(function () {
-        /* -------------------------- Dashboard Index Pages ------------------------- */
-        Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard');
-        /* ------------------------- Jadwal Pelajaran Pages ------------------------- */
-        Route::get('/jadwal-pelajaran', 'App\Http\Controllers\ScheduleController@index');
-        Route::get('/jadwal-pelajaran/atur-jadwal', 'App\Http\Controllers\ScheduleController@create');
-        Route::resource('schedules', 'App\Http\Controllers\ScheduleController');
+        /* ------------------------- Halaman Dashboard Admin ------------------------ */
+
+        Route::get('/', 'App\Http\Controllers\Backend\DashboardController@index')->name('dashboard');
+
+        /* ---------------------------- Kelola Data Warga --------------------------- */
+        Route::resource('muzakki', 'App\Http\Controllers\Backend\MuzakkiController');
+        Route::resource('mustahik', 'App\Http\Controllers\Backend\MustahikController');
+        Route::resource('kategori_mustahik', 'App\Http\Controllers\Backend\KategoriMustahikController');
+
+        /* ----------------- Kelola Distribusi dan Pengumpulan Zakat ---------------- */
+        Route::resource('pengumpulan_zakat', 'App\Http\Controllers\Backend\PengumpulanZakatController');
+        Route::resource('distribusi_zakat', 'App\Http\Controllers\Backend\DistribusiZakatController');
+
+        /* -------------------------- Laporan Zakat Fitrah -------------------------- */
+        Route::resource('laporan_pengumpulan', 'App\Http\Controllers\Backend\LaporanPengumpulanController');
+        Route::resource('laporan_distribusi', 'App\Http\Controllers\Backend\LaporanDistribusiController');
+
+        /* --------------------------- Kelola Data Website -------------------------- */
+        Route::resource('articles', 'App\Http\Controllers\Backend\ArticleController');
+        Route::resource('galleries', 'App\Http\Controllers\Backend\GalleryController');
     });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
