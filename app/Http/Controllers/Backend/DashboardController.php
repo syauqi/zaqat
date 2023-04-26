@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\PengumpulanZakat;
 
 class DashboardController extends Controller
 {
@@ -15,7 +16,11 @@ class DashboardController extends Controller
     public function index()
 
     {
-        return view('pages.backend.index');
+        $items = PengumpulanZakat::all();
+
+        return view('pages.backend.index', [
+            'items' => $items
+        ]);
     }
 
     /**

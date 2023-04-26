@@ -88,7 +88,7 @@
                      </nav>
                      <p class="mb-0">
                          <span class="color-gray">&copy; 2023 Zaqat, All Rights Reserved. With Love by</span>
-                         <a href="http://github.com/syauqi">Syauqi</a>
+                         <a href="http://github.com/syauqi">Syauqizaidan</a>
                      </p>
                  </div><!-- /.col-lg-12 -->
              </div><!-- /.row -->
