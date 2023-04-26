@@ -1,13 +1,13 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Atur Jadwal Pelajaran — Collegetivity')
+@section('title', 'Tambah Data Pengumpulan Zakat — Zaqat')
 @section('content')
 
     @push('timepicker-styles')
         <link rel="stylesheet" type="text/css" href="{{ url('cuba/assets/css/vendors/timepicker.css') }}">
         <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <style>
-            span.select2.select2-container.select2-container--classic{
+            span.select2.select2-container.select2-container--classic {
                 width: 100% !important;
             }
 
@@ -23,15 +23,15 @@
             <div class="card card-absolute mt-5 mt-md-4">
                 <div class="card-header bg-primary">
                     <h5 class="text-white">
-                        📅📚 • Atur Jadwal Pelajaran
+                        Tambah Data Pengumpulan Zakat
                     </h5>
                 </div>
                 <div class="card-body">
                     <p>
-                        Dibawah ini adalah form untuk tambah jadwal pelajaran mata kuliahmu.
+                        Dibawah ini adalah form untuk tambah data penguumpulan zakat.
                         <span class="d-none d-md-inline">
-                            Data dibawah pastikan kamu isi dengan benar dan lengkap ya, nanti datanya akan kami simpan
-                            dan dapat kamu akses dimana saja dan kapan saja.
+                            Data dibawah pastikan anda isi dengan benar dan lengkap ya, nantinya akan masuk ke laporan
+                            pengumpulan zakat.
                         </span>
                     </p>
                 </div>
@@ -42,7 +42,7 @@
             <div class="col-sm-12">
                 <div class="card">
                     <div class="card-header">
-                        <h5>Tambah Data Muzakki</h5>
+                        <h5>Tambah Data Pengumpulan Zakat</h5>
                     </div>
                     <form method="POST" action="{{ route('pengumpulan_zakat.store') }}" enctype="multipart/form-data"
                         class="needs-validation">
@@ -66,8 +66,8 @@
                                     <div class="">
                                         <select class="js-example-basic-single" name="nama_muzakki">
                                             <option></option>
-                                            @foreach($items as $item)
-                                            <option value="{{ $item->nama_muzakki }}">{{ $item->nama_muzakki }}</option>
+                                            @foreach ($items as $item)
+                                                <option value="{{ $item->nama_muzakki }}">{{ $item->nama_muzakki }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -77,79 +77,25 @@
                                 <div class="form-group col-md-4 mb-2">
                                     <label for="angkatan">Jumlah Tanggungan <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-building-community" width="20"
-                                                    height="20" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path
-                                                        d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8">
-                                                    </path>
-                                                    <line x1="13" y1="7" x2="13" y2="7.01">
-                                                    </line>
-                                                    <line x1="17" y1="7" x2="17" y2="7.01">
-                                                    </line>
-                                                    <line x1="17" y1="11" x2="17" y2="11.01">
-                                                    </line>
-                                                    <line x1="17" y1="15" x2="17" y2="15.01">
-                                                    </line>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <input required id="jumlah_tanggungan" type="text" value="{{ old('jumlah_tanggungan') }}"
-                                            class="form-control" name="jumlah_tanggungan">
+                                        <input required id="jumlah_tanggungan" type="text"
+                                            value="{{ old('jumlah_tanggungan') }}" class="form-control"
+                                            name="jumlah_tanggungan">
                                     </div>
                                 </div>
 
                                 <div class="form-group col-md-4 mb-2">
-                                    <label for="angkatan">Jumlah Tanggungan yang Dibayar <span class="text-danger">*</span></label>
+                                    <label for="angkatan">Jumlah Tanggungan yang Dibayar <span
+                                            class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-building-community" width="20"
-                                                    height="20" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path
-                                                        d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8">
-                                                    </path>
-                                                    <line x1="13" y1="7" x2="13" y2="7.01">
-                                                    </line>
-                                                    <line x1="17" y1="7" x2="17" y2="7.01">
-                                                    </line>
-                                                    <line x1="17" y1="11" x2="17" y2="11.01">
-                                                    </line>
-                                                    <line x1="17" y1="15" x2="17" y2="15.01">
-                                                    </line>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <input required id="jumlah_tanggungandibayar" type="text" value="{{ old('jumlah_tanggungandibayar') }}"
-                                            class="form-control" name="jumlah_tanggungandibayar">
+                                        <input required id="jumlah_tanggungandibayar" type="text"
+                                            value="{{ old('jumlah_tanggungandibayar') }}" class="form-control"
+                                            name="jumlah_tanggungandibayar">
                                     </div>
                                 </div>
 
                                 <div class="form-group col-md-4 mb-2">
                                     <label for="gender">Jenis Bayar <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <label class="input-group-text" for="inputGroupSelect01"><svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-man" width="20" height="20"
-                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <circle cx="12" cy="5" r="2"></circle>
-                                                    <path
-                                                        d="M10 22v-5l-1 -1v-4a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4l-1 1v5">
-                                                    </path>
-                                                </svg></label>
-                                        </div>
                                         <select class="custom-select" id="inputGroupSelect01" name="jenis_bayar">
                                             <option value="" disabled selected>Pilih ...</option>
                                             <option value="Beras">Beras</option>
@@ -158,25 +104,17 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group col-md-12">
+                                    <div class="alert alert-primary py-2" role="alert">
+                                        Isi salah satu dari 2 form dibawah ini, jika memilih beras sebelumnya maka isi
+                                        dengan
+                                        satuan KG dan jika uang maka isi dengan nominal angka tanpa RP
+                                    </div>
+                                </div>
+
                                 <div class="form-group col-md-6 mb-2">
                                     <label for="sks">Bayar Beras <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-list-numbers" width="20"
-                                                    height="20" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M11 6h9"></path>
-                                                    <path d="M11 12h9"></path>
-                                                    <path d="M12 18h8"></path>
-                                                    <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4"></path>
-                                                    <path d="M6 10v-6l-2 2"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
                                         <input id="bayar_beras" type="number" value="{{ old('bayar_beras') }}"
                                             class="form-control" name="bayar_beras">
                                     </div>
@@ -185,23 +123,7 @@
                                 <div class="form-group col-md-6 mb-2">
                                     <label for="sks">Bayar Uang <span class="text-danger">*</span></label>
                                     <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <svg xmlns="http://www.w3.org/2000/svg"
-                                                    class="icon icon-tabler icon-tabler-list-numbers" width="20"
-                                                    height="20" viewBox="0 0 24 24" stroke-width="2"
-                                                    stroke="currentColor" fill="none" stroke-linecap="round"
-                                                    stroke-linejoin="round">
-                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                                    <path d="M11 6h9"></path>
-                                                    <path d="M11 12h9"></path>
-                                                    <path d="M12 18h8"></path>
-                                                    <path d="M4 16a2 2 0 1 1 4 0c0 .591 -.5 1 -1 1.5l-3 2.5h4"></path>
-                                                    <path d="M6 10v-6l-2 2"></path>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                        <input id="bayar_uang" type="text" value="{{ old('bayar_uang') }}"
+                                        <input id="bayar_uang" type="number" value="{{ old('bayar_uang') }}"
                                             class="form-control" name="bayar_uang">
                                     </div>
                                 </div>
@@ -226,14 +148,14 @@
 
         <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
         <script>
-            $(document).ready(function(){
+            $(document).ready(function() {
                 $('.js-example-basic-single').select2({
                     theme: "classic",
                     width: 'resolve', // need to override the changed default
                     placeholder: "Pilih Muzakki yang Terdaftar",
                 });
             });
-            </script>
+        </script>
     @endpush
 
 @endsection

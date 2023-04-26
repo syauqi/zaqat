@@ -72,8 +72,6 @@ class DistribusiZakatController extends Controller
             // Mengupdate tabel JumlahZakat
             $jumlahZakat->jumlah_beras -= $request->jumlah_beras;
             $jumlahZakat->jumlah_uang -= $request->jumlah_uang;
-            $jumlahZakat->total_beras += $request->jumlah_beras;
-            $jumlahZakat->total_uang += $request->jumlah_uang;
             $jumlahZakat->total_distribusi += 1;
             $jumlahZakat->save();
 

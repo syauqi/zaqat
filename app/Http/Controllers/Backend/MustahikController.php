@@ -46,7 +46,7 @@ class MustahikController extends Controller
     {
         Mustahik::create($request->all());
 
-        return redirect()->route('mustahik.index')->with('success','Product created successfully.');
+        return redirect()->route('mustahik.index')->with('success', 'Product created successfully.');
     }
 
     /**
@@ -57,7 +57,6 @@ class MustahikController extends Controller
      */
     public function show($id)
     {
-
     }
 
     /**
@@ -68,10 +67,12 @@ class MustahikController extends Controller
      */
     public function edit($id)
     {
+        $kategori = KategoriMustahik::all();
         $item = Mustahik::findOrFail($id);
 
         return view('pages.backend.mustahik.edit', [
-            'item' => $item
+            'item' => $item,
+            'kategori' => $kategori
         ]);
     }
 
