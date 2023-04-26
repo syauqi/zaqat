@@ -10,9 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 /* ------------------------------ Landing Page ------------------------------ */
 
-Route::get('/', function () {
-    return view('pages.frontend.index');
-});
+Route::get('/', 'App\Http\Controllers\Frontend\HomeController@index');
 
 /* ----------------------------- Features Page ------------------------------ */
 Route::get('/about', function () {

@@ -24588,7 +24588,7 @@ body[class*='dark-'] .for-light {
     .page-wrapper.horizontal-wrapper .page-header .header-wrapper .form-control-plaintext {
       width: auto !important; }
   .page-wrapper .sidebar-main-title > div {
-    background-color: rgba(115, 102, 255, 0.06);
+    background-color: rgb(101 166 73 / 12%);
     padding: 15px 17px;
     border-radius: 10px; }
   .page-wrapper .sidebar-main-title h6 {
@@ -24716,7 +24716,7 @@ body[class*='dark-'] .for-light {
     .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper .sidebar-main .right-arrow {
       display: none; }
     .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper .sidebar-main .sidebar-links {
-      height: calc(100vh - 115px);
+      height: calc(100vh - 32px);
       left: -300px;
       z-index: 99;
       -webkit-transition: color 1s ease;
@@ -24788,11 +24788,11 @@ body[class*='dark-'] .for-light {
           padding: 0.44em 0.7em 0.32em;
           z-index: 1; }
         .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper .sidebar-main .sidebar-links > li.sidebar-list:hover > a:hover {
-          background-color: rgba(115, 102, 255, 0.12);
+            background-color: rgb(101 166 73 / 12%);
           -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease; }
         .page-wrapper.compact-wrapper .page-body-wrapper.sidebar-icon div.sidebar-wrapper .sidebar-main .sidebar-links > li:hover .sidebar-link:not(.active):hover svg {
-          fill: rgba(115, 102, 255, 0.1);
+            background-color: rgb(101 166 73 / 12%);
           stroke: var(--theme-deafult);
           -webkit-transition: all 0.3s ease;
           transition: all 0.3s ease; }

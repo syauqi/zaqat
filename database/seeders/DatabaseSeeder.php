@@ -18,5 +18,14 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@zaqat.com',
             'password' => Hash::make('123admin123')
         ]);
+
+        DB::table('jumlah_zakat')->insert([
+            'jumlah_beras' => 0,
+            'jumlah_uang' => 0,
+            'total_beras' => 0,
+            'total_uang' => 0,
+            'total_distribusi' => 0,
+
+        ]);
     }
 }

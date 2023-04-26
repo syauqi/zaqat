@@ -14,7 +14,7 @@
                               </li>
                               <li>
                                   <i class="icon-clock"></i>
-                                  <a href="contact-us.html">Sen - Jum: 8:00 am - 7:00 pm</a>
+                                  <a href="contact-us.html">Sen - Jum: 8:00 - 19:00</a>
                               </li>
                           </ul><!-- /.contact__list -->
                           <div class="d-flex align-items-center">
@@ -34,7 +34,7 @@
       <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container-fluid">
               <a class="navbar-brand" href="/">
-                  <img src="{{ url('solatec/assets/images/logo/logo.png') }}" class="logo" alt="logo">
+                  <img src="{{ url('solatec/assets/images/logo/logo2.png') }}" class="logo" alt="logo">
               </a>
               <button class="navbar-toggler" type="button">
                   <span class="menu-lines"><span></span></span>
@@ -42,19 +42,19 @@
               <div class="collapse navbar-collapse" id="mainNavigation">
                   <ul class="navbar-nav">
                       <li class="nav__item">
-                          <a href="index.html" class="nav__item-link">Beranda</a>
+                          <a href="{{ url('/') }}" class="nav__item-link">Beranda</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="{{url('about')}}" class="nav__item-link">Tentang Kami</a>
+                          <a href="{{ url('about') }}" class="nav__item-link">Tentang Kami</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="{{url('article')}}" class="nav__item-link">Artikel</a>
+                          <a href="{{ url('article') }}" class="nav__item-link">Artikel</a>
                       </li><!-- /.nav-item -->
                       <li class="nav__item">
-                        <a href="{{url('gallery')}}" class="nav__item-link">Galeri</a>
-                    </li><!-- /.nav-item -->
+                          <a href="{{ url('gallery') }}" class="nav__item-link">Galeri</a>
+                      </li><!-- /.nav-item -->
                       <li class="nav__item">
-                          <a href="{{url('contact')}}" class="nav__item-link">Hubungi Kami</a>
+                          <a href="{{ url('contact') }}" class="nav__item-link">Hubungi Kami</a>
                       </li><!-- /.nav-item -->
                   </ul><!-- /.navbar-nav -->
                   <button class="close-mobile-menu d-block d-lg-none"><i class="fas fa-times"></i></button>
@@ -65,7 +65,8 @@
               </div>
               <ul class="navbar-actions d-none d-xl-flex align-items-center list-unstyled mb-0">
                   <li>
-                      <a href="request-quote.html" class="btn btn__primary">
+                      <a href="https://api.whatsapp.com/send?phone=85156162840&text=Halo%2C%20saya%20ingin%20membayar%20zakat.%20Boleh%20tanya%20jam%20berapa%20bapak%20ada%20di%20masjid%3F"
+                          class="btn btn__primary">
                           <span>Pengumpulan Zakat</span>
                           <i class="icon-arrow-right"></i>
                       </a>

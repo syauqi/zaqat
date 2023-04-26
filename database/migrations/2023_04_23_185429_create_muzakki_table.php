@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nama_muzakki');
             $table->string('jumlah_tanggungan');
             $table->string('alamat');
-            $table->string('handphone');
+            $table->string('handphone')->nullable();
             $table->string('nomor_kk');
             $table->timestamps();
         });

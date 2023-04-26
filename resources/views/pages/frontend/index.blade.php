@@ -3,8 +3,8 @@
 @section('content')
     <div class="wrapper">
         <!-- ============================
-                        Slider
-                    ============================== -->
+                                                                                                                                            Slider
+                                                                                                                                        ============================== -->
         <section class="slider">
             <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
                 data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
@@ -20,10 +20,11 @@
                                         menjadi lebih mudah dan nyaman dengan aplikasi Zaqat.</p>
                                     </p>
                                     <div class="d-flex">
-                                        <a href="services.html" class="btn btn__primary mr-30">
+                                        <a href="{{ url('/about') }}" class="btn btn__primary mr-30">
                                             <i class="icon-arrow-right"></i><span>Tentang Kami</span>
                                         </a>
-                                        <a href="about-us.html" class="btn btn__white">Pengumpulan Zakat</a>
+                                        <a href="https://api.whatsapp.com/send?phone=85156162840&text=Halo%2C%20saya%20ingin%20membayar%20zakat.%20Boleh%20tanya%20jam%20berapa%20bapak%20ada%20di%20masjid%3F"
+                                            class="btn btn__white">Pengumpulan Zakat</a>
                                     </div>
                                 </div><!-- /.slide__body -->
                             </div><!-- /.col-xl-8 -->
@@ -41,10 +42,11 @@
                                     <p class="slide__desc">Aplikasi kami dibuat khusus untuk DKM dari semua masjid agar
                                         mempunyai sistem zakat yang efisien dan optimal.</p>
                                     <div class="d-flex">
-                                        <a href="services.html" class="btn btn__primary mr-30">
+                                        <a href="{{ url('/about') }}" class="btn btn__primary mr-30">
                                             <i class="icon-arrow-right"></i><span>Tentang Kami</span>
                                         </a>
-                                        <a href="about-us.html" class="btn btn__white">Pengumpulan Zakat</a>
+                                        <a href="https://api.whatsapp.com/send?phone=85156162840&text=Halo%2C%20saya%20ingin%20membayar%20zakat.%20Boleh%20tanya%20jam%20berapa%20bapak%20ada%20di%20masjid%3F"
+                                            class="btn btn__white">Pengumpulan Zakat</a>
                                     </div>
                                 </div><!-- /.slide__body -->
                             </div><!-- /.col-xl-8 -->
@@ -55,8 +57,8 @@
         </section><!-- /.slider -->
 
         <!-- ========================
-                        About Layout 1
-                      =========================== -->
+                                                                                                                                            About Layout 1
+                                                                                                                                          =========================== -->
         <section class="about-layout1 pt-130 pb-130">
             <div class="container">
                 <div class="row">
@@ -72,20 +74,20 @@
                     <div class="col-sm-12 col-md-12 col-lg-2">
                         <!-- counter item #1 -->
                         <div class="counter-item">
-                            <h4 class="counter">1.123</h4>
+                            <h4 class="counter">{{ $jumlah_zakat->total_beras }}</h4>
                             <p class="counter__desc pr-0">Kilogram Beras yang telah di distribusikan</p>
                             <div class="divider__line"></div>
                         </div>
                         <!-- counter item #2 -->
                         <div class="counter-item">
-                            <h4 class="counter">200</h4>
-                            <p class="counter__desc pr-0">Juta Uang yang telah di distribusikan</p>
+                            <h4 class="counter">{{ $jumlah_zakat->total_uang }}</h4>
+                            <p class="counter__desc pr-0">Uang yang telah di distribusikan</p>
                             <div class="divider__line"></div>
                         </div>
                         <!-- counter item #3 -->
                         <div class="counter-item">
-                            <h4 class="counter">561</h4>
-                            <p class="counter__desc pr-0">Mustahik yang telah dibantu</p>
+                            <h4 class="counter">{{ $jumlah_zakat->total_distribusi }}</h4>
+                            <p class="counter__desc pr-0">Total semua distribusi zakat</p>
                             <div class="divider__line"></div>
                         </div>
                     </div><!-- /.col-lg-2 -->
@@ -95,7 +97,7 @@
                             <div class="video-has-img">
                                 <img src="{{ url('solatec/assets/images/video/1.jpg') }}" alt="video">
                                 <a class="video__btn video__btn-white popup-video"
-                                    href="https://www.youtube.com/watch?v=nrJtHemSPW4">
+                                    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
                                     <div class="video__player">
                                         <i class="fa fa-play"></i>
                                     </div>
@@ -119,7 +121,7 @@
                             <p class="heading__desc mb-20">DKM akan selalu memberikan update kepada masyarakat melalu
                                 artikel ataupun galeri yang di upload di website ini</p>
                             <div class="d-flex align-items-center mt-30">
-                                <a href="services.html" class="btn btn__secondary mr-30">
+                                <a href="{{ url('/article') }}" class="btn btn__secondary mr-30">
                                     <i class="icon-arrow-right"></i> <span>lihat Artikel Terbaru</span>
                                 </a>
                             </div>
@@ -130,8 +132,8 @@
         </section><!-- /.About Layout 1 -->
 
         <!-- ======================
-                      services Layout 2
-                      ========================= -->
+                                                                                                                                          services Layout 2
+                                                                                                                                          ========================= -->
         <section class="services-layout2 pt-120">
             <div class="bg-img"><img src="{{ url('solatec/assets/images/backgrounds/5.jpg') }}" alt="background"></div>
             <div class="container">
@@ -271,8 +273,8 @@
         </section><!-- /.services Layout 2 -->
 
         <!-- ======================
-                        Blog Grid
-                      ========================= -->
+                                                                                                                                            Blog Grid
+                                                                                                                                          ========================= -->
         <section class="post-grid pb-60">
             <div class="container">
                 <div class="row">
@@ -284,101 +286,46 @@
                     </div><!-- /.col-lg-6 -->
                 </div><!-- /.row -->
                 <div class="row">
-                    <!-- Post Item #1 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="post-item">
-                            <div class="post__img">
-                                <a href="blog-single-post.html">
-                                    <img src="{{ url('solatec/assets/images/blog/grid/1.jpg') }}" alt="post image"
-                                        loading="lazy">
-                                </a>
-                                <span class="post__date">Jan 20, 2020</span>
-                            </div><!-- /.post-img -->
-                            <div class="post__body">
-                                <div class="post__meta d-flex align-items-center">
-                                    <div class="post__cat">
-                                        <a href="#">Oil & Gas</a><a href="#">Insights</a>
-                                    </div><!-- /.post-meta-cat -->
-                                    <a class="post__author" href="#">Mike Dooley</a>
-                                </div><!-- /.post-meta -->
-                                <h4 class="post__title"><a href="#">Filing Solar Power Permits in 2020? Consider the
-                                        Following Important
-                                        Factors
-                                    </a></h4>
-                                <p class="post__desc">All of these factors are important to consider when permitting your
-                                    solar system,
-                                    and can help streamline your process. Take the time to consider...
-                                </p>
-                                <a href="blog-single-post.html" class="btn btn__secondary btn__outlined btn__custom">
-                                    <i class="icon-arrow-right"></i>
-                                    <span>Read More</span>
-                                </a>
-                            </div><!-- /.post-content -->
-                        </div><!-- /.post-item -->
-                    </div><!-- /.col-lg-4 -->
-                    <!-- Post Item #2 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="post-item">
-                            <div class="post__img">
-                                <a href="blog-single-post.html">
-                                    <img src="{{ url('solatec/assets/images/blog/grid/2.jpg') }}" alt="post image"
-                                        loading="lazy">
-                                </a>
-                                <span class="post__date">Jan 20, 2020</span>
-                            </div><!-- /.post-img -->
-                            <div class="post__body">
-                                <div class="post__meta d-flex align-items-center">
-                                    <div class="post__cat">
-                                        <a href="#">Oil & Gas</a><a href="#">Insights</a>
-                                    </div><!-- /.post-meta-cat -->
-                                    <a class="post__author" href="#">Mike Dooley</a>
-                                </div><!-- /.post-meta -->
-                                <h4 class="post__title"><a href="#">Filing Solar Power Permits in 2020? Consider the
-                                        Following Important
-                                        Factors
-                                    </a></h4>
-                                <p class="post__desc">Batteries are the most expensive part of a solar system. Between an
-                                    appropriately-size battery bank and a battery-based inverter like the Outback Ra
-                                </p>
-                                <a href="blog-single-post.html" class="btn btn__secondary btn__outlined btn__custom">
-                                    <i class="icon-arrow-right"></i>
-                                    <span>Read More</span>
-                                </a>
-                            </div><!-- /.post-content -->
-                        </div><!-- /.post-item -->
-                    </div><!-- /.col-lg-4 -->
-                    <!-- Post Item #3 -->
-                    <div class="col-sm-12 col-md-6 col-lg-4">
-                        <div class="post-item">
-                            <div class="post__img">
-                                <a href="blog-single-post.html">
-                                    <img src="{{ url('solatec/assets/images/blog/grid/3.jpg') }}" alt="post image"
-                                        loading="lazy">
-                                </a>
-                                <span class="post__date">Jan 20, 2020</span>
-                            </div><!-- /.post-img -->
-                            <div class="post__body">
-                                <div class="post__meta d-flex align-items-center">
-                                    <div class="post__cat">
-                                        <a href="#">Oil & Gas</a><a href="#">Insights</a>
-                                    </div><!-- /.post-meta-cat -->
-                                    <a class="post__author" href="#">Mike Dooley</a>
-                                </div><!-- /.post-meta -->
-                                <h4 class="post__title"><a href="#">Filing Solar Power Permits in 2020? Consider the
-                                        Following Important
-                                        Factors
-                                    </a></h4>
-                                <p class="post__desc">Department of Energy, which is why we have funded six teams to
-                                    improve
-                                    technologies that will protect eagles sharing airspace with the new wind ...
-                                </p>
-                                <a href="blog-single-post.html" class="btn btn__secondary btn__outlined btn__custom">
-                                    <i class="icon-arrow-right"></i>
-                                    <span>Read More</span>
-                                </a>
-                            </div><!-- /.post-content -->
-                        </div><!-- /.post-item -->
-                    </div><!-- /.col-lg-4 -->
+                    @forelse ($articles as $artcls)
+                        <!-- Post Item #1 -->
+                        <div class="col-sm-12 col-md-6 col-lg-4">
+                            <div class="post-item">
+                                <div class="post__img">
+                                    <a href="blog-single-post.html">
+                                        <img style=" width: 100%;
+                                        height: 320px;
+                                        object-fit: cover;"
+                                            src="{{ url('storage/images/' . $artcls->thumbnail) }}" alt="blog">
+                                    </a>
+                                    <span class="post__date">{{ $artcls->tanggal }}</span>
+                                </div><!-- /.post-img -->
+                                <div class="post__body">
+                                    <div class="post__meta d-flex align-items-center">
+                                        <div class="post__cat">
+                                            <a href="#">Kabar DKM Terkini</a>
+                                        </div><!-- /.post-meta-cat -->
+                                        <a class="post__author" href="#">Administrator</a>
+                                    </div><!-- /.post-meta -->
+                                    <h4 class="post__title"><a href="#">{{ $artcls->judul }}
+                                        </a></h4>
+                                    <p class="post__desc">
+                                        {{ substr(strip_tags(htmlspecialchars_decode($artcls->content)), 0, 100) }} ...</a>
+                                    </p>
+                                    <a href="{{ route('articles.show', $artcls->id) }}"
+                                        class="btn btn__secondary btn__outlined btn__custom">
+                                        <i class="icon-arrow-right"></i>
+                                        <span>Baca Selengkapnya</span>
+                                    </a>
+                                </div><!-- /.post-content -->
+                            </div><!-- /.post-item -->
+                        </div><!-- /.col-lg-4 -->
+                    @empty
+                        <div class="col-lg-12 text-center mx-auto mt-3">
+                            <h1 class="mb-2">Tidak ada artikel yang ada disini</h1>
+                            <p class="mb-4">Kami sedang menyiapkan artikel atau berita bagi anda.
+                            </p>
+                        </div>
+                    @endforelse
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /.blog Grid -->

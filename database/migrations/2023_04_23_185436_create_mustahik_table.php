@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('nama_mustahik');
             $table->string('kategori_mustahik');
             $table->string('jumlah_hak');
-            $table->string('alamat');
-            $table->string('handphone');
-            $table->string('nomor_kk');
+            $table->string('alamat')->nullable();
+            $table->string('handphone')->nullable();
+            $table->string('nomor_kk')->nullable();
             $table->timestamps();
         });
     }

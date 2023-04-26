@@ -16,7 +16,9 @@ return new class extends Migration
             $table->string('nama_muzakki');
             $table->string('jumlah_tanggungan');
             $table->string('jenis_bayar');
-            $table->string('jumlah_bayar');
+            $table->string('jumlah_tanggungandibayar');
+            $table->integer('bayar_beras')->nullable();
+            $table->integer('bayar_uang')->nullable();
             $table->timestamps();
         });
     }
