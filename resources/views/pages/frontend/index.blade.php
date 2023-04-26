@@ -3,8 +3,8 @@
 @section('content')
     <div class="wrapper">
         <!-- ============================
-                                                                                                                                            Slider
-                                                                                                                                        ============================== -->
+                                                                                                                                                Slider
+                                                                                                                                            ============================== -->
         <section class="slider">
             <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
                 data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
@@ -57,8 +57,8 @@
         </section><!-- /.slider -->
 
         <!-- ========================
-                                                                                                                                            About Layout 1
-                                                                                                                                          =========================== -->
+                                                                                                                                                About Layout 1
+                                                                                                                                              =========================== -->
         <section class="about-layout1 pt-130 pb-130">
             <div class="container">
                 <div class="row">
@@ -132,8 +132,8 @@
         </section><!-- /.About Layout 1 -->
 
         <!-- ======================
-                                                                                                                                          services Layout 2
-                                                                                                                                          ========================= -->
+                                                                                                                                              services Layout 2
+                                                                                                                                              ========================= -->
         <section class="services-layout2 pt-120">
             <div class="bg-img"><img src="{{ url('solatec/assets/images/backgrounds/5.jpg') }}" alt="background"></div>
             <div class="container">
@@ -273,8 +273,8 @@
         </section><!-- /.services Layout 2 -->
 
         <!-- ======================
-                                                                                                                                            Blog Grid
-                                                                                                                                          ========================= -->
+                                                                                                                                                Blog Grid
+                                                                                                                                              ========================= -->
         <section class="post-grid pb-60">
             <div class="container">
                 <div class="row">
@@ -311,7 +311,7 @@
                                     <p class="post__desc">
                                         {{ substr(strip_tags(htmlspecialchars_decode($artcls->content)), 0, 100) }} ...</a>
                                     </p>
-                                    <a href="{{ route('articles.show', $artcls->id) }}"
+                                    <a href="{{ route('article.show', $artcls->id) }}"
                                         class="btn btn__secondary btn__outlined btn__custom">
                                         <i class="icon-arrow-right"></i>
                                         <span>Baca Selengkapnya</span>

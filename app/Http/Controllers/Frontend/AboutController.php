@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Articles;
 use App\Models\JumlahZakat;
 
-class HomeController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,16 +20,10 @@ class HomeController extends Controller
         $articles = Articles::paginate(3);
         $jumlahZakat = DB::table('jumlah_zakat')->first();
 
-        return view('pages.frontend.index', [
+        return view('pages.frontend.about', [
             'articles' => $articles,
             'jumlah_zakat' => $jumlahZakat,
         ]);
-    }
-
-    public function about()
-    {
-        $articles = Articles::paginate(4);
-        return view('pages.frontend.about.index', compact('articles'));
     }
 
     /**
@@ -61,11 +55,7 @@ class HomeController extends Controller
      */
     public function show($id)
     {
-        $item = Articles::findOrFail($id);
-
-        return view('pages.frontend.articles.detail', [
-            'item' => $item
-        ]);
+        //
     }
 
     /**

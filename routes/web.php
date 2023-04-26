@@ -13,9 +13,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'App\Http\Controllers\Frontend\HomeController@index');
 
 /* ----------------------------- Features Page ------------------------------ */
-Route::get('/about', function () {
-    return view('pages.frontend.about');
-});
+Route::get('/about', 'App\Http\Controllers\Frontend\AboutController@index');
+
 
 /* ------------------------------ Article Page ------------------------------ */
 Route::resource('/article', 'App\Http\Controllers\Frontend\ArticleController');
