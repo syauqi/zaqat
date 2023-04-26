@@ -23,9 +23,8 @@ Route::get('/article', function () {
 });
 
 /* ------------------------------ Gallery Page ------------------------------ */
-Route::get('/gallery', function () {
-    return view('pages.frontend.gallery');
-});
+Route::resource('/gallery', 'App\Http\Controllers\Frontend\GalleryController');
+
 
 /* ------------------------------ Contact Page ------------------------------ */
 Route::get('/contact', function () {

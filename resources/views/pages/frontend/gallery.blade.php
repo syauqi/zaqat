@@ -3,18 +3,17 @@
 @section('content')
     <div class="wrapper">
         <!-- ========================
-           page title
-        =========================== -->
+                                                               page title
+                                                            =========================== -->
         <section class="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax text-center">
-            <div class="bg-img"><img src="assets/images/page-titles/7.jpg" alt="background"></div>
+            <div class="bg-img"><img src="{{ url('solatec/assets/images/page-titles/7.jpg') }}" alt="background"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <h1 class="pagetitle__heading mb-0">gallery</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Company</a></li>
+                                <li class="breadcrumb-item"><a href="#">Beranda</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">gallery</li>
                             </ol>
                         </nav>
@@ -27,53 +26,20 @@
         </section><!-- /.page-title -->
 
         <!-- ======================
-           Gallery
-          ========================= -->
+                                                               Gallery
+                                                              ========================= -->
         <section id="gallery" class="gallery">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/1.jpg">
-                                <img src="assets/images/gallery/1.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/2.jpg">
-                                <img src="assets/images/gallery/2.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/3.jpg">
-                                <img src="assets/images/gallery/3.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/4.jpg">
-                                <img src="assets/images/gallery/4.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/5.jpg">
-                                <img src="assets/images/gallery/5.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                        <div class="gallery-item">
-                            <a class="popup-gallery-item" href="assets/images/gallery/6.jpg">
-                                <img src="assets/images/gallery/6.jpg" alt="gallery img">
-                            </a>
-                        </div>
-                    </div><!-- /.col-lg-4 -->
+                    @foreach ($galleries as $glrs)
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="gallery-item">
+                                <a class="popup-gallery-item" href="{{ url('storage/images/' . $glrs->foto) }}">
+                                    <img src="{{ url('storage/images/' . $glrs->foto) }}" alt="gallery img">
+                                </a>
+                            </div>
+                        </div><!-- /.col-lg-4 -->
+                    @endforeach
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </section><!-- /.Gallery -->

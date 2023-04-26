@@ -8,7 +8,8 @@
                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 footer-widget footer-widget-contact">
                      <h6 class="footer-widget-title">Hubungi Kami</h6>
                      <div class="footer-widget-content">
-                         <p class="mb-20">Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk menghubungi tim kami.
+                         <p class="mb-20">Jika Anda memiliki pertanyaan atau butuh bantuan, jangan ragu untuk
+                             menghubungi tim kami.
                          </p>
                          <div class="contact__number d-flex align-items-center mb-30">
                              <i class="icon-phone"></i>
@@ -22,11 +23,11 @@
                      <div class="footer-widget-content">
                          <nav>
                              <ul class="list-unstyled">
-                                 <li><a href="about-us.html">Beranda</a></li>
-                                 <li><a href="leadership-team.html">Tentang Kami</a></li>
-                                 <li><a href="blog.html">Hubungi Kami</a></li>
-                                 <li><a href="blog.html">Tentang Aplikasi</a></li>
-                                 <li><a href="blog.html">Dukung Pembuat</a></li>
+                                 <li><a href="#">Beranda</a></li>
+                                 <li><a href="#">Tentang Kami</a></li>
+                                 <li><a href="#">Hubungi Kami</a></li>
+                                 <li><a href="#">Tentang Aplikasi</a></li>
+                                 <li><a href="#">Dukung Pembuat</a></li>
                              </ul>
                          </nav>
                      </div><!-- /.footer-widget-content -->
@@ -60,7 +61,7 @@
                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 footer-widget footer-widget-align-right">
                      <h6 class="footer-widget-title">Pedoman Aplikasi</h6>
                      <div class="footer-widget-content">
-                         <a href="request-quote.html" class="btn btn__primary btn__primary-style2 btn__download mb-60">
+                         <a href="#" class="btn btn__primary btn__primary-style2 btn__download mb-60">
                              <i class="icon-download"></i>
                              <span>Download PDF</span>
                          </a>
