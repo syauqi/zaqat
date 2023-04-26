@@ -18,9 +18,8 @@ Route::get('/about', function () {
 });
 
 /* ------------------------------ Article Page ------------------------------ */
-Route::get('/article', function () {
-    return view('pages.frontend.article');
-});
+Route::resource('/article', 'App\Http\Controllers\Frontend\ArticleController');
+
 
 /* ------------------------------ Gallery Page ------------------------------ */
 Route::resource('/gallery', 'App\Http\Controllers\Frontend\GalleryController');
