@@ -1,66 +1,131 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">Selamat datang di repository Zaqat! 👋🏻</h1>
+
+![Zaqat-Preview](https://user-images.githubusercontent.com/46257169/234664301-22284b9b-6cdb-4597-8d4d-a24d8719dcca.png)
+
+<p></p>
+
+<h4 align="center">Website yang menyediakan layanan pembayaran dan pendataan zakat fitrah yang dibuat dengan <a href="https://laravel.com/" target="_blank">Laravel</a>.
+</h4>
+
+<p></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+	<img src="https://img.shields.io/github/issues/syauqi/zaqat?style=flat-square">
+	<img src="https://img.shields.io/github/stars/syauqi/zaqat?style=flat-square"> 
+	<img src="https://img.shields.io/github/forks/syauqi/zaqat?style=flat-square">
+	<img src="https://img.shields.io/github/license/syauqi/zaqat?style=flat-square">
+	<img src="https://img.shields.io/badge/maintained%3F-yes-green.svg?style=flat-square">
+	<img src="https://img.shields.io/github/followers/syauqi.svg?style=flat-square&label=followers">
 </p>
 
-## About Laravel
+<p align="center">
+  <a href="#tentang">Tentang Project</a> •
+  <a href="#fitur">Fitur</a> •
+  <a href="#download">Download & Install</a> •
+  <a href="#dukungan">Dukungan</a> •
+  <a href="#lisensi">Lisensi</a>
+</p>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p></p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h2 id="tentang">🕌 Tentang Zaqat</h2>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Website ini berperan sebagai tempat pembayaran dan pendataaan zakat
+fitrah di masing masing daerah DKM Indonesia. Disini Terdapat banyak sekali fitur yang membantu mendigitalisasi pembayaran zakat di daerah daerah Indonesia.
 
-## Learning Laravel
+<p></p>
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h2 id="fitur">✨ Fitur Tersedia</h2>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Landing Page dan Autentikasi
+  - Halaman [homepage, tentang, fitur, kontak]
+  - Autentikasi [daftar dan login]
+- Pengelolaan Data Muzakki
+  - Tambah Data Muzakki
+  - Update dan Hapus data Muzakki
+  - Data Laporan Muzakki
+- Pengelolaan Data Mustahik
+  - Tambah Data Mustahik
+  - Update dan Hapus data Mustahik
+  - Data Laporan Mustahik
+- Pengelolaan Data Kategori Mustahik
+  - Tambah Data Kategori
+- Fitur Report
+  - Laporan Pembayaran Pengumpulan
+  - Laporan Distribusi
+- Fitur Pembayaran dan Pendistribusian Zakat
+  - Pengumpulan Zakat
+  - Distribusi Zakat
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+<p></p>
 
-## Laravel Sponsors
+<h2 id="demo">🏠 Halaman Demo</h2>
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Halaman demo saat ini tidak ada, oleh karena itu baiknya anda coba di local dengan menutur tahapan dibawah instalasi dibawah ini
 
-### Premium Partners
+<p></p>
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+<h2 id="syarat">💾 Prasyarat yang Diperlukan</h2>
 
-## Contributing
+Berikut adalah daftar layanan dan aplikasi yang wajib dan diperlukan selama anda menjalankan aplikasi learnify jika anda belum menginstall nya maka disarankan untuk menginstall nya terlebih dahulu
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP 8 & Web Server [XAMPP, LAMPP, MAMP]
+- Web Browser [Chrome, Firefox, Safari & Opera]
+- Internet [Karena menggunakan banyak CDN]
 
-## Code of Conduct
+<p></p>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<h2 id="download">🐱‍💻 Panduan Menjalankan & Install Aplikasi</h2>
 
-## Security Vulnerabilities
+Untuk menjalankan aplikasi atau web ini kamu harus install XAMPP atau web server lain dan mempunyai setidaknya satu web browser yang terinstall di komputer anda.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+# Clone repository ini atau download di
+$ git clone https://github.com/syauqi/zaqat.git
 
-## License
+# Kemudian jalankan command composer install, ini akan menginstall resources yang laravel butuhkan
+$ composer install
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Lakukan copy .env dengan cara ketik command seperti dibawah 
+$ cp .env.example .env
+
+# Generate key juga jangan lupa dengan command dibawah
+$ php artisan key:generate
+
+# Jangan lupa migrate database dengan cara membuat database di phpmyadmin atau aplikasi lainnya yang kalian pakai,
+# lalu jangan lupa untuk mengganti variable DB_DATABASE di file .env yang di folder project
+$ php artisan migrate:fresh --seed
+
+# Lalu jalankan aplikasi kalian dengan command dibawah
+$ php artisan serve
+
+# Selamat aplikasi dapat anda nikmati di local!
+```
+<p></p>
+
+<h2 id="dukungan">💌 Dukungan</h2>
+
+Kalian bisa mendukung saya di platform trakteer! Dukungan kalian akan sangat membantu untuk saya, namun dengan anda star project ini juga sudah sangat membantu lho!
+
+<p></p>
+
+<a href="https://trakteer.id/syaufy" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-5.png" height="40" style="border:0px;height:40px;" alt="Trakteer Saya"></a>
+
+<p></p>
+
+<h2 id="kontribusi">🤝 Kontribusi</h2>
+
+Contributions, issues and feature requests sangat saya apresiasi karena aplikasi ini jauh dari kata sempurna. Jangan ragu untuk pull request dan membuat perubahan pada project ini.
+
+Berhubung Project ini saya selesaikan sendiri, namun banyak fitur dan banyak hal yang bisa diperbaiki maka bantuan kalian sangat saya apresiasi.
+
+<p></p>
+
+<h2 id="lisensi">📝 Lisensi</h2>
+
+- Copyright © 2023 SYAUQIZAIDAN KHAIRAN KHALAF
+- Zaqat adalah aplikasi web open-source yang berlisensi dibawah lisensi MIT
+
+---
+
+**<p align="center">Made with ❤️ by SYAUQIZAIDAN KHAIRAN KHALAF</p>**
