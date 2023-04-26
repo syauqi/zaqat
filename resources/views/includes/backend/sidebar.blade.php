@@ -20,7 +20,7 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('dashboard')}}">
+                    <a class="sidebar-link sidebar-title link-nav" href="{{ url('dashboard') }}">
                         <i data-feather="home"></i>
                         <span>Dashboard</span>
                     </a>
@@ -35,17 +35,17 @@
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title">
-                        <i data-feather="book"></i>
+                        <i data-feather="user-plus"></i>
                         <span>Data Muzakki</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li class="active">
-                            <a href="{{url('/dashboard/muzakki/')}}">
+                            <a href="{{ url('/dashboard/muzakki/') }}">
                                 Master Data Muzakki
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/muzakki/create')}}">
+                            <a href="{{ url('/dashboard/muzakki/create') }}">
                                 Atur & Tambah Data Muzakki
                             </a>
                         </li>
@@ -54,17 +54,17 @@
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="edit"></i>
+                        <i data-feather="user-minus"></i>
                         <span>Data Mustahik</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/mustahik/')}}">
+                            <a href="{{ url('/dashboard/mustahik/') }}">
                                 Master Data Mustahik
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/mustahik/create')}}">
+                            <a href="{{ url('/dashboard/mustahik/create') }}">
                                 Atur & Tambah Data Mustahik
                             </a>
                         </li>
@@ -73,17 +73,17 @@
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="image"></i>
+                        <i data-feather="users"></i>
                         <span>Kategori Mustahik</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/kategori_mustahik/')}}">
+                            <a href="{{ url('/dashboard/kategori_mustahik/') }}">
                                 Semua Kategori Mustahik
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/kategori_mustahik/create')}}">
+                            <a href="{{ url('/dashboard/kategori_mustahik/create') }}">
                                 Tambah Kategori Mustahik
                             </a>
                         </li>
@@ -99,17 +99,17 @@
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="bookmark"></i>
+                        <i data-feather="shopping-bag"></i>
                         <span>Pengumpulan Zakat</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/pengumpulan_zakat')}}">
+                            <a href="{{ url('/dashboard/pengumpulan_zakat') }}">
                                 Data Pengumpulan Zakat Fitrah
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/pengumpulan_zakat/create')}}">
+                            <a href="{{ url('/dashboard/pengumpulan_zakat/create') }}">
                                 Tambah Pengumpulan Zakat Fitrah
                             </a>
                         </li>
@@ -118,17 +118,17 @@
 
                 <li class="sidebar-list">
                     <a class="sidebar-link sidebar-title" href="#">
-                        <i data-feather="bookmark"></i>
+                        <i data-feather="tablet"></i>
                         <span>Distribusi Zakat</span>
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/distribusi_zakat')}}">
+                            <a href="{{ url('/dashboard/distribusi_zakat') }}">
                                 Data Distribusi Zakat Fitrah
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/distribusi_zakat/create')}}">
+                            <a href="{{ url('/dashboard/distribusi_zakat/create') }}">
                                 Tambah Data Distribusi Zakat Fitrah
                             </a>
                         </li>
@@ -144,15 +144,15 @@
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/laporan_pengumpulan')}}">
-                        <i data-feather="clipboard"></i>
+                    <a class="sidebar-link sidebar-title link-nav" href="{{ url('/dashboard/laporan_pengumpulan') }}">
+                        <i data-feather="bar-chart"></i>
                         <span>Laporan Pengumpulan</span>
                     </a>
                 </li>
 
                 <li class="sidebar-list">
-                    <a class="sidebar-link sidebar-title link-nav" href="{{url('/dashboard/laporan_distribusi')}}">
-                        <i data-feather="clipboard"></i>
+                    <a class="sidebar-link sidebar-title link-nav" href="{{ url('/dashboard/laporan_distribusi') }}">
+                        <i data-feather="pie-chart"></i>
                         <span>Laporan Distribusi</span>
                     </a>
                 </li>
@@ -172,12 +172,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/articles')}}">
+                            <a href="{{ url('/dashboard/articles') }}">
                                 Data Artikel
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/articles/create')}}">
+                            <a href="{{ url('/dashboard/articles/create') }}">
                                 Tulis & Tambah Artikel Baru
                             </a>
                         </li>
@@ -191,12 +191,12 @@
                     </a>
                     <ul class="sidebar-submenu">
                         <li>
-                            <a href="{{url('/dashboard/galleries')}}">
+                            <a href="{{ url('/dashboard/galleries') }}">
                                 Semua Galeri & Foto
                             </a>
                         </li>
                         <li>
-                            <a href="{{url('/dashboard/galleries/create')}}">
+                            <a href="{{ url('/dashboard/galleries/create') }}">
                                 Upload Foto Baru
                             </a>
                         </li>

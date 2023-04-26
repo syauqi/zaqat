@@ -1,6 +1,6 @@
 @extends('layouts.backend.master')
 
-@section('title', 'Selamat datang di Collegetivity ' . Auth::user()->name . '!')
+@section('title', 'Selamat datang di Dashboard Zaqat ' . Auth::user()->name . '!')
 @section('content')
 
     @push('datatable-styles')
@@ -31,14 +31,13 @@
             <div class="col-sm-8">
                 <div class="card">
                     <div class="card-header">
-                        <h5>📚 • Pembayaran Zakat Akhir Akhir Ini</span>
+                        <h5>💰 • Pembayaran Zakat Terbaru</span>
                     </div>
                     <div class="card-body">
                         <div class="dt-ext table-responsive">
                             <table class="display" id="auto-fill">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nama Muzzaki</th>
                                         <th>Jenis Bayar</th>
                                         <th>Jml Tanggungan Dibayar</th>
@@ -49,7 +48,6 @@
                                 <tbody>
                                     @forelse ($items as $item)
                                         <tr>
-                                            <td>{{ $item->id }}</td>
                                             <td>
                                                 <div class="d-flex py-1 align-items-center">
                                                     <div class="avatars mr-2">
@@ -78,7 +76,6 @@
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>ID</th>
                                         <th>Nama Muzzaki</th>
                                         <th>Jenis Bayar</th>
                                         <th>Jml Tanggungan Dibayar</th>

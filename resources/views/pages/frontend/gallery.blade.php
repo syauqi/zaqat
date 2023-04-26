@@ -3,18 +3,18 @@
 @section('content')
     <div class="wrapper">
         <!-- ========================
-                                                               page title
-                                                            =========================== -->
+                                                                   page title
+                                                                =========================== -->
         <section class="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax text-center">
             <div class="bg-img"><img src="{{ url('solatec/assets/images/page-titles/7.jpg') }}" alt="background"></div>
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h1 class="pagetitle__heading mb-0">gallery</h1>
+                        <h1 class="pagetitle__heading mb-0">Galeri dan Dokumentasi</h1>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb justify-content-center">
                                 <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">gallery</li>
+                                <li class="breadcrumb-item active" aria-current="page">Galeri</li>
                             </ol>
                         </nav>
                         <a href="#gallery" class="scroll-down">
@@ -26,8 +26,8 @@
         </section><!-- /.page-title -->
 
         <!-- ======================
-                                                               Gallery
-                                                              ========================= -->
+                                                                   Gallery
+                                                                  ========================= -->
         <section id="gallery" class="gallery">
             <div class="container">
                 <div class="row">

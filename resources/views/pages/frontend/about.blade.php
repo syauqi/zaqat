@@ -4,8 +4,8 @@
     <div class="wrapper">
 
         <!-- ========================
-                   page title
-                =========================== -->
+                       page title
+                    =========================== -->
         <section class="page-title page-title-layout1 bg-overlay bg-overlay-2 bg-parallax text-center">
             <div class="bg-img"><img src="{{ url('solatec/assets/images/page-titles/1.jpg') }}" alt="background"></div>
             <div class="container">
@@ -26,7 +26,7 @@
             </div><!-- /.container -->
         </section><!-- /.page-title -->
 
-        =========================== -->
+
         <section class="about-layout1 pt-130 pb-130">
             <div class="container">
                 <div class="row">
@@ -100,8 +100,8 @@
         </section><!-- /.About Layout 1 -->
 
         <!-- ======================
-                                                                                                                                                      services Layout 2
-                                                                                                                                                      ========================= -->
+                                                                                                                                                          services Layout 2
+                                                                                                                                                          ========================= -->
         <section class="services-layout2 pt-120">
             <div class="bg-img"><img src="{{ url('solatec/assets/images/backgrounds/5.jpg') }}" alt="background"></div>
             <div class="container">
@@ -241,8 +241,8 @@
         </section><!-- /.services Layout 2 -->
 
         <!-- ======================
-                                                                                                                                                        Blog Grid
-                                                                                                                                                      ========================= -->
+                                                                                                                                                            Blog Grid
+                                                                                                                                                          ========================= -->
         <section class="post-grid pb-60">
             <div class="container">
                 <div class="row">
